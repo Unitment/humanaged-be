@@ -23,7 +23,6 @@ public class IdGenerator implements IdentifierGenerator {
     @Override
     public Serializable generate(SharedSessionContractImplementor session, Object o) throws HibernateException {
 
-
         String query = String.format("select %s from %s",
                 session.getEntityPersister(o.getClass().getName(), o)
                         .getIdentifierPropertyName(),
