@@ -8,6 +8,8 @@ import java.io.Serializable;
 
 @Embeddable
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProjectMemberKey implements Serializable {
 
     @Column(name = "employeeId")

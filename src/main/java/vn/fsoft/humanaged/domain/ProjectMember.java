@@ -1,9 +1,11 @@
 package vn.fsoft.humanaged.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -12,6 +14,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class ProjectMember {
 
     @EmbeddedId

@@ -7,6 +7,9 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -38,5 +41,5 @@ public class Project {
     private ProjectState state;
 
     @OneToMany(mappedBy = "project")
-    private Set<ProjectMember> projects;
+    private Set<ProjectMember> projectMembers;
 }
