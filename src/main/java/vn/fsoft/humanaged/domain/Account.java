@@ -12,9 +12,11 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "account")
 public class Account {
 
     @Id
+    @Column (name="account_name")
     private String accountName;
 
     private String password;
