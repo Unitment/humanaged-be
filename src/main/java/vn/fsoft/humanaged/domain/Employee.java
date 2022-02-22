@@ -8,6 +8,9 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -51,9 +54,11 @@ public class Employee {
     @JoinColumn(name = "accountName")
     private Account account;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "bul")
     private BusinessUnit businessUnit;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "employee")
     private Set<ProjectMember> projects;
 }

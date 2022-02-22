@@ -1,6 +1,9 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.service.IEmployeeService;
@@ -8,6 +11,7 @@ import vn.fsoft.humanaged.service.IEmployeeService;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EmployeeService implements IEmployeeService {
 
     @Autowired
@@ -20,7 +24,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Optional<Employee> getById(String key) {
-        return Optional.empty();
+        return employeeRepository.findById(key);
     }
 
     @Override
@@ -31,5 +35,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void deleteById(String key) {
 
+    }
+
+    @Override
+    public List<Employee> findEmployeeByStatus(Status status) {
+        return employeeRepository.findAllByStatus(status);
     }
 }

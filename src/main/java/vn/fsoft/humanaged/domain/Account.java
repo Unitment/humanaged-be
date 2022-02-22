@@ -7,6 +7,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Getter
 @Setter
@@ -22,6 +24,7 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private SystemRole role;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "account")
     private Employee employee;
 }

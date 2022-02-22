@@ -7,6 +7,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Getter
 @Setter
@@ -16,7 +18,7 @@ public class ProjectMember {
 
     @EmbeddedId
     private ProjectMemberKey id;
-
+    
     @ManyToOne
     @MapsId("employeeID")
     private Employee employee;
