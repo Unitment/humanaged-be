@@ -1,5 +1,7 @@
 package vn.fsoft.humanaged.dto;
 
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +20,7 @@ public class ProjectDto {
     private String description;
 
     private ProjectState state;
+
+    private LocalDate startDate;
+
 }
