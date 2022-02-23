@@ -54,11 +54,11 @@ public class Employee {
     @JoinColumn(name = "accountName")
     private Account account;
 
-    @JsonIgnore
+    // @JsonIgnore
     @OneToOne(mappedBy = "bul")
     private BusinessUnit businessUnit;
 
-    @JsonIgnore
+    // @JsonIgnore
     @OneToMany(mappedBy = "employee")
     private Set<ProjectMember> projects;
 }

@@ -24,7 +24,7 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private SystemRole role;
 
-    @JsonIgnore
+    // @JsonIgnore
     @OneToOne(mappedBy = "account")
     private Employee employee;
 }
