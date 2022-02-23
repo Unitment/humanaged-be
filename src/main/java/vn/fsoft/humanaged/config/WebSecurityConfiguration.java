@@ -17,6 +17,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
         http.cors().and().csrf().disable();
     }
 
+
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
@@ -25,8 +26,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
+        source.registerCorsConfiguration("http://localhost:4200", configuration);
         return source;
     }
+
 
 }

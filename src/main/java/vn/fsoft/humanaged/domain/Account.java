@@ -1,5 +1,6 @@
 package vn.fsoft.humanaged.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private SystemRole role;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "account")
     private Employee employee;
 }

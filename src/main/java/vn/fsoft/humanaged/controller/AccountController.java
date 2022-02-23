@@ -18,8 +18,8 @@ public class AccountController {
     @Autowired
     private IAccountRepository accountRepository;
 
+    @CrossOrigin (origins = "https://localhost:4200")
     @PostMapping ("/login")
-    @CrossOrigin (origins = "http://localhost:4200")
     public Account login (@RequestBody Account account) throws Exception {
         String accountName= account.getAccountName();
         String password=account.getPassword();
@@ -29,11 +29,13 @@ public class AccountController {
             accountObj=accountService.fetchAccountByAccountNameAndPassword(accountName,password);
         }
         if (accountObj==null) {
-            throw new Exception ("Wrong username or password");
+            throw new Exception ("Wrong a or password");
         }
         return accountObj;
 
     }
+
+
 
 
 }

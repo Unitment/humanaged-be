@@ -1,13 +1,14 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class EmployeeService implements IEmployeeService {
 
     @Autowired
@@ -22,6 +23,8 @@ public class EmployeeService implements IEmployeeService {
     public Optional<Employee> getById(String key) {
         return Optional.empty();
     }
+
+
 
     @Override
     public Employee save(Employee entity) {
