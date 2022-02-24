@@ -10,14 +10,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.fsoft.humanaged.domain.ProjectAndMember;
+import vn.fsoft.humanaged.dto.ProjectAndMember;
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectRole;
-import vn.fsoft.humanaged.dto.ProjectAndMemberDto;
-import vn.fsoft.humanaged.dto.ProjectMemberDto;
+import vn.fsoft.humanaged.dto.ProjectAndMemberDTO;
+import vn.fsoft.humanaged.dto.ProjectMemberDTO;
 import vn.fsoft.humanaged.service.IProjectMemberService;
 
 @RestController
@@ -31,20 +30,20 @@ public class ProjectMemberController {
     private ModelMapper modelMapper;
 
     @GetMapping("role/{role}")
-    public ResponseEntity<List<ProjectMemberDto>> getMemberByRole(@PathVariable("role") ProjectRole role){
+    public ResponseEntity<List<ProjectMemberDTO>> getMemberByRole(@PathVariable("role") ProjectRole role){
         List<ProjectMember> projectMember = projectMemberService.findMemberByRole(role);
-        List<ProjectMemberDto> subProjectMems = projectMember.stream()
-                        .map(projectMem -> modelMapper.map(projectMem, ProjectMemberDto.class))
+        List<ProjectMemberDTO> subProjectMems = projectMember.stream()
+                        .map(projectMem -> modelMapper.map(projectMem, ProjectMemberDTO.class))
                         .collect(Collectors.toList());
         return new ResponseEntity<>(subProjectMems,HttpStatus.OK);
     }
 
     //Lấy ra pm có id tương ứng
     @GetMapping("pm/{employeeId}")
-    public ResponseEntity<List<ProjectMemberDto>> getMemberByRole(@PathVariable("employeeId") String employeeId){
+    public ResponseEntity<List<ProjectMemberDTO>> getMemberByRole(@PathVariable("employeeId") String employeeId){
         List<ProjectMember> projectMember = projectMemberService.findMemberByEmployeeId(employeeId);
-        List<ProjectMemberDto> subProjectMems = projectMember.stream()
-                        .map(projectMem -> modelMapper.map(projectMem, ProjectMemberDto.class))
+        List<ProjectMemberDTO> subProjectMems = projectMember.stream()
+                        .map(projectMem -> modelMapper.map(projectMem, ProjectMemberDTO.class))
                         .collect(Collectors.toList());
         return new ResponseEntity<>(subProjectMems,HttpStatus.OK);
     }
@@ -61,10 +60,10 @@ public class ProjectMemberController {
 
     //id truyền vào là id của PM
     @GetMapping("projectAndMember/{id}")
-    public ResponseEntity<List<ProjectAndMemberDto>> getMemberByProjectId(@PathVariable("id") String id){
+    public ResponseEntity<List<ProjectAndMemberDTO>> getMemberByProjectId(@PathVariable("id") String id){
         List<ProjectAndMember> projectMember = projectMemberService.findProjectAndMemberByPMId(id);
-        List<ProjectAndMemberDto> subProjectMems = projectMember.stream()
-                        .map(projectMem -> modelMapper.map(projectMem, ProjectAndMemberDto.class))
+        List<ProjectAndMemberDTO> subProjectMems = projectMember.stream()
+                        .map(projectMem -> modelMapper.map(projectMem, ProjectAndMemberDTO.class))
                         .collect(Collectors.toList());
         return new ResponseEntity<>(subProjectMems,HttpStatus.OK);
     }

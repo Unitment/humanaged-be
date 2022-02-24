@@ -1,9 +1,13 @@
 package vn.fsoft.humanaged.dto;
 
-import lombok.*;
-import vn.fsoft.humanaged.domain.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import vn.fsoft.humanaged.domain.Account;
+import vn.fsoft.humanaged.domain.Gender;
+import vn.fsoft.humanaged.domain.Status;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -59,5 +63,4 @@ public class EmployeeDTO {
                 employeeFlatDTO.getRole()
         );
     }
-
 }

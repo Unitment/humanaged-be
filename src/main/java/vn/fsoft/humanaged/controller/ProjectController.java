@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import vn.fsoft.humanaged.domain.Project;
 import vn.fsoft.humanaged.domain.ProjectState;
-import vn.fsoft.humanaged.dto.ProjectDto;
+import vn.fsoft.humanaged.dto.ProjectDTO;
 import vn.fsoft.humanaged.service.IProjectService;
 
 @RestController
@@ -26,18 +26,18 @@ public class ProjectController {
     private ModelMapper modelMapper;
 
     @GetMapping("/all")
-    public ResponseEntity<List<ProjectDto>> getAllProjects(){
+    public ResponseEntity<List<ProjectDTO>> getAllProjects(){
         List<Project> projects = projectService.getAll();
-        List<ProjectDto> subProjects = projects.stream()
-                        .map(project -> modelMapper.map(project, ProjectDto.class))
+        List<ProjectDTO> subProjects = projects.stream()
+                        .map(project -> modelMapper.map(project, ProjectDTO.class))
                         .collect(Collectors.toList());
         return new ResponseEntity<>(subProjects,HttpStatus.OK);
     }
     @GetMapping("/{state}")
-    public ResponseEntity<List<ProjectDto>> getProjectByState(@PathVariable("state") ProjectState state){
+    public ResponseEntity<List<ProjectDTO>> getProjectByState(@PathVariable("state") ProjectState state){
         List<Project> projects = projectService.findProjectByState(state);
-        List<ProjectDto> subProjects = projects.stream()
-                        .map(project -> modelMapper.map(project, ProjectDto.class))
+        List<ProjectDTO> subProjects = projects.stream()
+                        .map(project -> modelMapper.map(project, ProjectDTO.class))
                         .collect(Collectors.toList());
         return new ResponseEntity<>(subProjects,HttpStatus.OK);
     }

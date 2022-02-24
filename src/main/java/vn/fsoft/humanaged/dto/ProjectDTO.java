@@ -12,7 +12,7 @@ import vn.fsoft.humanaged.domain.ProjectState;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProjectDto {
+public class ProjectDTO {
     private String id;
 
     private String name;

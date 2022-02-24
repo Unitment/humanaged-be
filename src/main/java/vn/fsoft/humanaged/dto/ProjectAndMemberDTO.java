@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProjectAndMemberDto{
-    private ProjectDto project;
+public class ProjectAndMemberDTO {
+    private ProjectDTO project;
 
-    private List<ProjectMemberDto> memberList;
+    private List<ProjectMemberDTO> memberList;
 }

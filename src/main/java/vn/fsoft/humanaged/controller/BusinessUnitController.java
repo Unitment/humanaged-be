@@ -9,11 +9,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import vn.fsoft.humanaged.domain.BusinessUnit;
-import vn.fsoft.humanaged.dto.BuDto;
+import vn.fsoft.humanaged.dto.BuDTO;
 import vn.fsoft.humanaged.service.IBusinessUnitService;
 
 @RestController
@@ -28,10 +27,10 @@ public class BusinessUnitController {
 
     @GetMapping("/all")
     // @ResponseBody
-    public ResponseEntity<List<BuDto>> getAllBUs(){
+    public ResponseEntity<List<BuDTO>> getAllBUs(){
         List<BusinessUnit> BUs = businessService.getAll();
-        List<BuDto> lsBU = BUs.stream()
-                            .map(bu -> modelMapper.map(bu, BuDto.class))
+        List<BuDTO> lsBU = BUs.stream()
+                            .map(bu -> modelMapper.map(bu, BuDTO.class))
                             .collect(Collectors.toList());
         return new ResponseEntity<>(lsBU,HttpStatus.OK);
     }

@@ -1,6 +1,8 @@
-package vn.fsoft.humanaged.domain;
+package vn.fsoft.humanaged.dto;
 
 import lombok.*;
+import vn.fsoft.humanaged.domain.Project;
+import vn.fsoft.humanaged.domain.ProjectMember;
 
 
 import java.io.Serializable;

@@ -10,7 +10,7 @@ import vn.fsoft.humanaged.domain.SystemRole;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountDto {
+public class AccountDTO {
     private String accountName;
     private SystemRole role;
 }
