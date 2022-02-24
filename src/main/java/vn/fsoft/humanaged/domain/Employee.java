@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
@@ -21,6 +23,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Employee {
 
     @Id
@@ -73,5 +76,6 @@ public class Employee {
 
     // @JsonIgnore
     @OneToMany(mappedBy = "employee")
+    @JsonIgnore
     private Set<ProjectMember> projects;
 }

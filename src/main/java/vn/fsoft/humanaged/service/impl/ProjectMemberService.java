@@ -32,7 +32,7 @@ public class ProjectMemberService implements IProjectMemberService {
 
     @Override
     public ProjectMember save(ProjectMember entity) {
-        return null;
+        return projectMemberRepository.save(entity);
     }
 
     @Override

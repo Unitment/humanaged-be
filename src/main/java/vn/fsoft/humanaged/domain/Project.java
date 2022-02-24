@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 
@@ -19,6 +21,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Project {
 
     @Id
@@ -44,6 +47,6 @@ public class Project {
     private ProjectState state;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "project")
-    private Set<ProjectMember> projects;
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private Set<ProjectMember> projectMembers;
 }
