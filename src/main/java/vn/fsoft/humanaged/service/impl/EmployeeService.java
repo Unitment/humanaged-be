@@ -1,6 +1,9 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import vn.fsoft.humanaged.domain.Status;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
@@ -24,7 +27,7 @@ public class EmployeeService implements IEmployeeService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
+    @Override
     public List<Employee> getAll() {
         return employeeRepository.findAll();
     }
@@ -36,12 +39,16 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Employee save(Employee entity) {
-
         return employeeRepository.save(entity);
     }
 
     @Override
     public void deleteById(String key) {
 
+    }
+
+    @Override
+    public List<Employee> findEmployeeByStatus(Status status) {
+        return employeeRepository.findAllByStatus(status);
     }
 }

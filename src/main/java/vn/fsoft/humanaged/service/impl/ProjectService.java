@@ -1,13 +1,17 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import vn.fsoft.humanaged.domain.Project;
+import vn.fsoft.humanaged.domain.ProjectState;
 import vn.fsoft.humanaged.repository.IProjectRepository;
 import vn.fsoft.humanaged.service.IProjectService;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProjectService implements IProjectService {
 
     @Autowired
@@ -15,7 +19,7 @@ public class ProjectService implements IProjectService {
 
     @Override
     public List<Project> getAll() {
-        return null;
+        return projectRepository.findAll();
     }
 
     @Override
@@ -32,4 +36,10 @@ public class ProjectService implements IProjectService {
     public void deleteById(String key) {
 
     }
+
+    @Override
+    public List<Project> findProjectByState(ProjectState state) {
+        return projectRepository.findAllByState(state);
+    }
+
 }

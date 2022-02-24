@@ -7,6 +7,9 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -37,6 +40,7 @@ public class Project {
     @Enumerated(EnumType.STRING)
     private ProjectState state;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "project")
     private Set<ProjectMember> projects;
 }

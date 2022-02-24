@@ -1,5 +1,17 @@
 package vn.fsoft.humanaged.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,6 +33,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import vn.fsoft.humanaged.domain.Status;
+
+import vn.fsoft.humanaged.domain.Employee;
+import vn.fsoft.humanaged.dto.EmployeeDto;
+import vn.fsoft.humanaged.service.IEmployeeService;
+
 @RestController
 @RequestMapping("/api/employee")
 @CrossOrigin("http://localhost:4200")
@@ -34,7 +52,6 @@ public class EmployeeController {
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-
 
     @Autowired
     private ModelMapper modelMapper;
@@ -114,6 +131,22 @@ public class EmployeeController {
         Employee employee = convertToEntity(employeeDTO);
 
         return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee),EmployeeDTO.class));
+    }
+
+    @GetMapping("/{status}")
+    public ResponseEntity<List<EmployeeDto>> getEmployeeByState(@PathVariable("status") Status status){
+        List<Employee> employees = employeeService.findEmployeeByStatus(status);
+        List<EmployeeDto> subEmployees = employees.stream()
+                .map(emp -> modelMapper.map(emp, EmployeeDto.class))
+                .collect(Collectors.toList());
+        return new ResponseEntity<>(subEmployees,HttpStatus.OK);
+    }
+
+    @GetMapping("id/{id}")
+    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") String id){
+        Employee employee = employeeService.getById(id).orElseThrow();
+        EmployeeDto subEmployee = modelMapper.map(employee, EmployeeDto.class);
+        return new ResponseEntity<>(subEmployee,HttpStatus.OK);
     }
 
     public Employee convertToEntity(EmployeeDTO employeeDTO){
