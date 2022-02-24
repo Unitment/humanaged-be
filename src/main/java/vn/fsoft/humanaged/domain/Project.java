@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
 
@@ -29,12 +30,14 @@ public class Project {
     @GeneratedValue(generator = "projectIdGen")
     private String id;
 
+    @Nationalized
     private String name;
 
     private LocalDate startDate;
 
     private LocalDate endDate;
 
+    @Nationalized
     private String description;
 
     @Enumerated(EnumType.STRING)

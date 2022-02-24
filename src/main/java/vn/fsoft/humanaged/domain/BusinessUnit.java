@@ -9,6 +9,8 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.Nationalized;
+
 @Entity
 @Getter
 @Setter
@@ -20,6 +22,8 @@ public class BusinessUnit implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+
+    @Nationalized
     private String name;
 
     @OneToOne

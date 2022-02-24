@@ -113,7 +113,7 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee),EmployeeDTO.class));
     }
 
-    @GetMapping("/{status}")
+    @GetMapping("/status/{status}")
     public ResponseEntity<List<EmployeeDTO>> getEmployeeByState(@PathVariable("status") Status status){
         List<Employee> employees = employeeService.findEmployeeByStatus(status);
         List<EmployeeDTO> subEmployees = employees.stream()
