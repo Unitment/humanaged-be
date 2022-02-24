@@ -1,8 +1,9 @@
 package vn.fsoft.humanaged.service;
 
 import org.springframework.stereotype.Service;
-import vn.fsoft.humanaged.domain.Project;
+import vn.fsoft.humanaged.dto.ProjectDTO;
 
 @Service
-public interface IProjectService extends IService<Project, String> {
+public interface IProjectService extends IService<ProjectDTO, String> {
+    ProjectDTO updateProject(ProjectDTO projectDTO);
 }
