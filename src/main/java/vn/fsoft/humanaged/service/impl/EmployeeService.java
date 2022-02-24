@@ -1,31 +1,43 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
+import vn.fsoft.humanaged.repository.IAccountRepository;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
+import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EmployeeService implements IEmployeeService {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
 
-    @Override
+    @Autowired
+    private IAccountService accountService;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
     public List<Employee> getAll() {
-        return null;
+        return employeeRepository.findAll();
     }
 
     @Override
     public Optional<Employee> getById(String key) {
-        return Optional.empty();
+        return employeeRepository.findById(key);
     }
 
     @Override
     public Employee save(Employee entity) {
-        return null;
+
+        return employeeRepository.save(entity);
     }
 
     @Override

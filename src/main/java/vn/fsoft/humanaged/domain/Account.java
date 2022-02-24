@@ -1,11 +1,10 @@
 package vn.fsoft.humanaged.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -23,5 +22,12 @@ public class Account {
     private SystemRole role;
 
     @OneToOne(mappedBy = "account")
+    @JsonIgnore
     private Employee employee;
+
+    public Account(String accountName, String password, SystemRole role) {
+        this.accountName = accountName;
+        this.password = password;
+        this.role = role;
+    }
 }

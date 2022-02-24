@@ -1,13 +1,16 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.repository.IAccountRepository;
 import vn.fsoft.humanaged.service.IAccountService;
+import vn.fsoft.humanaged.util.Normalization;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AccountService implements IAccountService {
 
     @Autowired
@@ -31,5 +34,29 @@ public class AccountService implements IAccountService {
     @Override
     public void deleteById(String key) {
 
+    }
+
+    @Override
+    public String generateAccountForName(String userName) {
+        //get first letter
+        StringBuilder accountNameBuilder = new StringBuilder();
+        String[] temp = userName.split(" ");
+
+        accountNameBuilder.append(Normalization.removeAccent(temp[temp.length-1].trim().toLowerCase()));
+        for (int i = 0; i < temp.length-1; i++) {
+            accountNameBuilder.append(temp[i].charAt(0));
+        }
+
+        String accountName = accountNameBuilder.toString().trim().toLowerCase();
+
+        final String NAME_REGEX_SQL = accountName + "[0-9]%";
+        int nextAccountNameIndex = accountRepository.countAccountByAccountNameLike(NAME_REGEX_SQL) + 1;
+
+        return accountName + nextAccountNameIndex;
+    }
+
+    @Override
+    public boolean isExist(String accountName) {
+        return accountRepository.existsAccountByAccountNameEquals(accountName);
     }
 }
