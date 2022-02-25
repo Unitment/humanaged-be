@@ -1,6 +1,7 @@
 package vn.fsoft.humanaged.controller;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -16,7 +17,6 @@ import vn.fsoft.humanaged.service.IProjectService;
 
 @RestController
 @RequestMapping("/api/project")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ProjectController {
     @Autowired
     private IProjectService projectService;
@@ -42,20 +42,24 @@ public class ProjectController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ProjectDTO> getById(@PathVariable("id") String id) {
-        return ResponseEntity.ok(
-                projectService.getById(id).orElseThrow(() -> new RuntimeException("Project not found")));
+        Optional<Project> projectOptional = projectService.getById(id);
+        return projectOptional.map(project -> ResponseEntity.ok(modelMapper.map(project, ProjectDTO.class)))
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping()
     public ResponseEntity<List<ProjectDTO>> getAll() {
+        List<Project> projectList = projectService.getAll();
         return ResponseEntity.ok(
-                projectService.getAll());
+                projectList.stream()
+                        .map(project -> modelMapper.map(project, ProjectDTO.class))
+                        .collect(Collectors.toList())
+        );
     }
 
     @PostMapping()
     public ResponseEntity<ProjectDTO> save(@RequestBody ProjectDTO entity) {
-        return ResponseEntity.ok(
-                projectService.save(entity));
+        return ResponseEntity.ok(projectService.saveDTO(entity));
     }
 
     @PutMapping()
