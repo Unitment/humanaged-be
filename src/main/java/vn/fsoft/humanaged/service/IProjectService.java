@@ -13,4 +13,6 @@ public interface IProjectService extends IService<Project, String> {
     List<Project> findProjectByState(ProjectState state);
 
     ProjectDTO updateProject(ProjectDTO projectDTO);
+
+    ProjectDTO saveDTO(ProjectDTO entity);
 }

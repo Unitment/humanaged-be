@@ -47,7 +47,7 @@ public class ProjectMemberService implements IProjectMemberService {
 
     @Override
     public List<ProjectMember> findMemberByEmployeeId(String employeeId) {
-        List<ProjectMember> temp1 = projectMemberRepository.findAllByEmployee_Id(employeeId);
+        List<ProjectMember> temp1 = projectMemberRepository.findAllByEmployee_IdOrderByRole(employeeId);
         List<ProjectMember> temp2 = projectMemberRepository.findAllByRole(ProjectRole.LEADER);
         List<ProjectMember> temp3 = projectMemberRepository.findAllByRole(ProjectRole.MEMBER);
         // temp2.removeAll(temp1);

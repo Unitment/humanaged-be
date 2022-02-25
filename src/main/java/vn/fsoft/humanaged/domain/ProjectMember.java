@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class ProjectMember {
 
     @EmbeddedId

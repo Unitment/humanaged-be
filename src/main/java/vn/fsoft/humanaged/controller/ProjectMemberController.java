@@ -60,11 +60,11 @@ public class ProjectMemberController {
 
     //id truyền vào là id của PM
     @GetMapping("projectAndMember/{id}")
-    public ResponseEntity<List<ProjectAndMemberDTO>> getMemberByProjectId(@PathVariable("id") String id){
+    public ResponseEntity<List<ProjectAndMember>> getMemberByProjectId(@PathVariable("id") String id){
         List<ProjectAndMember> projectMember = projectMemberService.findProjectAndMemberByPMId(id);
-        List<ProjectAndMemberDTO> subProjectMems = projectMember.stream()
-                        .map(projectMem -> modelMapper.map(projectMem, ProjectAndMemberDTO.class))
-                        .collect(Collectors.toList());
-        return new ResponseEntity<>(subProjectMems,HttpStatus.OK);
+//        List<ProjectAndMemberDTO> subProjectMems = projectMember.stream()
+//                        .map(projectMem -> modelMapper.map(projectMem, ProjectAndMemberDTO.class))
+//                        .collect(Collectors.toList());
+        return new ResponseEntity<>(projectMember,HttpStatus.OK);
     }
 }

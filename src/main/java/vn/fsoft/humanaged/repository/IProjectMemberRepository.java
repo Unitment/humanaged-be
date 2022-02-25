@@ -17,4 +17,6 @@ public interface IProjectMemberRepository extends JpaRepository<ProjectMember, P
     List<ProjectMember> findAllByEmployee_Id(String id);
 
     List<ProjectMember> findAllByProject_Id(String id);
+
+    List<ProjectMember> findAllByEmployee_IdOrderByRole(String employeeId);
 }
