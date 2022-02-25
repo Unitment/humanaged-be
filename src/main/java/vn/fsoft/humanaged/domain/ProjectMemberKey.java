@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class ProjectMemberKey implements Serializable {
 
     @Column(name = "employeeId")

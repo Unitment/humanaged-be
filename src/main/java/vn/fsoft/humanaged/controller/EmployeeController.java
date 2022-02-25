@@ -10,8 +10,7 @@ import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.domain.SystemRole;
-import vn.fsoft.humanaged.dto.EmployeeDTO;
-import vn.fsoft.humanaged.dto.EmployeeFlatDTO;
+import vn.fsoft.humanaged.dto.*;
 import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
@@ -134,4 +133,21 @@ public class EmployeeController {
 
         return employeeDTO;
     }
+
+    @GetMapping("/detail/{id}")
+    @ResponseBody
+    public ResponseEntity<EmployeeDetailDTO> getEmployeeByID(@PathVariable("id") String id){
+        Employee employee = employeeService.getById(id).orElse(new Employee());
+        EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
+        employeeProjectDTO.setProjects(
+            employee.getProjects().stream().map(pm -> {
+                ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
+                pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
+                return pmd;
+            }).collect(Collectors.toSet())
+        );
+
+        return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
+    }
+
 }
