@@ -3,13 +3,18 @@ package vn.fsoft.humanaged.dto;
 import java.time.LocalDate;
 import java.util.Set;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import vn.fsoft.humanaged.domain.Gender;
 import vn.fsoft.humanaged.domain.Status;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class EmployeeDetailDTO {
     private String id;
 

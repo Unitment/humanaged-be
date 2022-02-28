@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import vn.fsoft.humanaged.dto.ProjectAndMember;
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectRole;
-import vn.fsoft.humanaged.dto.ProjectAndMemberDTO;
 import vn.fsoft.humanaged.dto.ProjectMemberDTO;
 import vn.fsoft.humanaged.service.IProjectMemberService;
 

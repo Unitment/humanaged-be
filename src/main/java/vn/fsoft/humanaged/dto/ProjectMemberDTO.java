@@ -14,9 +14,6 @@ import vn.fsoft.humanaged.domain.ProjectRole;
 @AllArgsConstructor
 public class ProjectMemberDTO {
     private ProjectMemberKey projectMemberKey;
-
-    // private ProjectRole role;
-    // private EmployeeDto employee;
     private EmployeeDTO employee;
     private ProjectRole role;
     private Project project;
