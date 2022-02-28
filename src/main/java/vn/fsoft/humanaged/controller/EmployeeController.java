@@ -1,5 +1,6 @@
 package vn.fsoft.humanaged.controller;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -33,18 +34,19 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     @ResponseBody
-    public ResponseEntity<EmployeeDetailDTO> getEmployeeByID(@PathVariable("id") String id){
-        Employee employee = employeeService.getById(id).orElse(new Employee());
-        EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
-        employeeProjectDTO.setProjects(
-            employee.getProjectMembers().stream().map(pm -> {
-                ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
-                pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
-                return pmd;
-            }).collect(Collectors.toSet())
-        );
-
-        return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
+    public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id){
+        Optional<Employee> oEmployee = employeeService.getById(id);
+        if(oEmployee.isPresent()){
+            Employee employee = oEmployee.get();
+            EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
+            employeeProjectDTO.setProjectMember(
+                employee.getProjectMembers().stream().map(pm -> {
+                    ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
+                    pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
+                    return pmd;
+                }).collect(Collectors.toSet())
+            );
+            return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
+        } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-    
 }
