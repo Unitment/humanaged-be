@@ -68,9 +68,6 @@ public class ProjectController {
 
             return new ResponseEntity<>(projectDetailDTO, HttpStatus.OK);
         } else return new ResponseEntity<ProjectDetailDTO>(HttpStatus.NOT_FOUND);
-<<<<<<< HEAD
-    } 
-=======
     }
 
     @GetMapping()
@@ -103,5 +100,4 @@ public class ProjectController {
     public void deleteById(@PathVariable("id") String id) {
         projectService.deleteById(id);
     }
->>>>>>> origin/dev
 }
