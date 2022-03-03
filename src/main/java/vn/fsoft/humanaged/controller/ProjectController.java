@@ -9,6 +9,8 @@ import vn.fsoft.humanaged.domain.Project;
 import vn.fsoft.humanaged.domain.ProjectState;
 import vn.fsoft.humanaged.dto.EmployeeDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
+import vn.fsoft.humanaged.dto.ProjectDetailDTO;
+import vn.fsoft.humanaged.dto.ProjectMemberEmployeesDTO;
 import vn.fsoft.humanaged.service.IProjectService;
 
 import java.util.List;
@@ -48,12 +50,12 @@ public class ProjectController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/detail/{id}")
     @ResponseBody
-    public ResponseEntity<ProjectDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id){
+    public ResponseEntity<ProjectDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
         Optional<Project> oProject = projectService.getById(id);
 
-        if(oProject.isPresent()){
+        if (oProject.isPresent()) {
             Project project = oProject.get();
             ProjectDetailDTO projectDetailDTO = modelMapper.map(project, ProjectDetailDTO.class);
             projectDetailDTO.setProjectMember(
@@ -78,9 +80,14 @@ public class ProjectController {
         );
     }
 
-    @PostMapping()
-    public ResponseEntity<ProjectDTO> save(@RequestBody ProjectDTO entity) {
-        return ResponseEntity.ok(projectService.saveDTO(entity));
+//    @PostMapping()
+//    public ResponseEntity<ProjectDTO> save(@RequestBody ProjectDTO entity) {
+//        return ResponseEntity.ok(projectService.saveDTO(entity));
+//    }
+
+    @PostMapping
+    public ResponseEntity<Project> saveProject(@RequestBody Project project) {
+        return ResponseEntity.ok(projectService.save(project));
     }
 
     @PutMapping()

@@ -5,16 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
-
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -76,5 +71,5 @@ public class Employee {
     // @JsonIgnore
     @OneToMany(mappedBy = "employee")
     @JsonIgnore
-    private Set<ProjectMember> projects;
+    private Set<ProjectMember> projectMembers;
 }

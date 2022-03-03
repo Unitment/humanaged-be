@@ -43,7 +43,7 @@ public class EmployeeDTO {
 
     private Account account;
 
-    public EmployeeDTO(EmployeeFlatDTO employeeFlatDTO){
+    public EmployeeDTO(EmployeeFlatDTO employeeFlatDTO) {
         this.id = employeeFlatDTO.getId();
         this.name = employeeFlatDTO.getName();
 
@@ -63,6 +63,4 @@ public class EmployeeDTO {
                 employeeFlatDTO.getRole()
         );
     }
-
-    private Status status;
 }
