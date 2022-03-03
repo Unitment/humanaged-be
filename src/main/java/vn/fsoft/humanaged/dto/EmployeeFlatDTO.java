@@ -4,12 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.domain.Gender;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.domain.SystemRole;
-
-import java.time.LocalDate;
 
 @Getter
 @Setter

@@ -1,13 +1,14 @@
 package vn.fsoft.humanaged.dto;
 
-import lombok.*;
-import vn.fsoft.humanaged.domain.Project;
-import vn.fsoft.humanaged.domain.ProjectMember;
-
-
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import vn.fsoft.humanaged.domain.Project;
+import vn.fsoft.humanaged.domain.ProjectMember;
 
 @Getter
 @Setter
