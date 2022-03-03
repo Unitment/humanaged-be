@@ -20,5 +20,5 @@ public class ProjectDetailDTO {
 
     private ProjectState state;
 
-    private Set<ProjectMemberEmployeesDTO> projectMember;
+    private Set<ProjectMemberEmployeesDTO> projectMembers;
 }

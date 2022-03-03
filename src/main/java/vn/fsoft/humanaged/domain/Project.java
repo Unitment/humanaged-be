@@ -4,7 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
 
@@ -18,6 +21,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Project {
 
     @Id
@@ -29,17 +33,20 @@ public class Project {
     @GeneratedValue(generator = "projectIdGen")
     private String id;
 
+    @Nationalized
     private String name;
 
     private LocalDate startDate;
 
     private LocalDate endDate;
 
+    @Nationalized
     private String description;
 
     @Enumerated(EnumType.STRING)
     private ProjectState state;
 
-    @OneToMany(mappedBy = "project")
+    @JsonIgnore
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private Set<ProjectMember> projectMembers;
 }

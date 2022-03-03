@@ -35,9 +35,9 @@ public class ProjectController {
         Optional<Project> oProject = projectService.getById(id);
         
         if(oProject.isPresent()){
-            Project project = oProject.get();
+            Project project = oProject.get(); 
             ProjectDetailDTO projectDetailDTO = modelMapper.map(project, ProjectDetailDTO.class);
-            projectDetailDTO.setProjectMember(
+            projectDetailDTO.setProjectMembers(
                 project.getProjectMembers().stream().map(pm -> {
                     ProjectMemberEmployeesDTO pmd = modelMapper.map(pm, ProjectMemberEmployeesDTO.class);
                     pmd.setEmployee(modelMapper.map(pm.getEmployee(), EmployeeDTO.class));
@@ -47,6 +47,5 @@ public class ProjectController {
     
             return new ResponseEntity<>(projectDetailDTO, HttpStatus.OK);
         } else return new ResponseEntity<ProjectDetailDTO>(HttpStatus.NOT_FOUND);
-    }
-    
+    } 
 }

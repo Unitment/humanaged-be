@@ -1,27 +1,30 @@
 package vn.fsoft.humanaged.dto;
 
-import java.time.LocalDate;
-import java.util.Set;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.domain.Gender;
 import vn.fsoft.humanaged.domain.Status;
+import vn.fsoft.humanaged.domain.SystemRole;
+
+import java.time.LocalDate;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeDetailDTO {
+public class EmployeeFlatDTO {
     private String id;
 
     private String name;
 
-    private LocalDate birthday;
+    private String birthday;
 
     private Gender gender;
+
+    private String phoneNumber;
 
     private String mail;
 
@@ -33,7 +36,11 @@ public class EmployeeDetailDTO {
 
     private String ward;
 
+    private String address;
+
     private Status status;
 
-    private Set<ProjectMemberProjectsDTO> projectMembers;
+    private String accountName;
+
+    private SystemRole role;
 }

@@ -1,11 +1,12 @@
 package vn.fsoft.humanaged.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Getter
@@ -22,6 +23,14 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private SystemRole role;
 
+    // @JsonIgnore
     @OneToOne(mappedBy = "account")
+    @JsonIgnore
     private Employee employee;
+
+    public Account(String accountName, String password, SystemRole role) {
+        this.accountName = accountName;
+        this.password = password;
+        this.role = role;
+    }
 }
