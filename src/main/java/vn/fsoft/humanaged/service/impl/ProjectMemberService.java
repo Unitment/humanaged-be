@@ -3,6 +3,7 @@ package vn.fsoft.humanaged.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.*;
+import vn.fsoft.humanaged.dto.MemberDTO;
 import vn.fsoft.humanaged.dto.ProjectAndMember;
 import vn.fsoft.humanaged.repository.IProjectMemberRepository;
 import vn.fsoft.humanaged.service.IEmployeeService;
@@ -71,14 +72,17 @@ public class ProjectMemberService implements IProjectMemberService {
     }
 
     @Override
-    public void addEmployeeToProject(String idEmployee, String idProject, ProjectRole role) {
-        Optional<Employee> emp = employeeService.getById(idEmployee);
-        Optional<Project> prj = projectService.getById(idProject);
+    public void addEmployeeToProject(MemberDTO memberDTO) {
 
-        ProjectMember projectMember = new ProjectMember(new ProjectMemberKey(idEmployee, idProject),
-                emp.get(), prj.get(), role);
+        Optional<Project> prj = projectService.getById(memberDTO.getProjectID());
 
-        projectMemberRepository.save(projectMember);
+        for (String empID : memberDTO.getEmployeeIDList()) {
+            Optional<Employee> emp = employeeService.getById(empID);
+            ProjectMember projectMember = new ProjectMember(new ProjectMemberKey(empID, memberDTO.getProjectID()),
+                    emp.get(), prj.get(), memberDTO.getRole());
+
+            projectMemberRepository.save(projectMember);
+        }
     }
 
     @Override

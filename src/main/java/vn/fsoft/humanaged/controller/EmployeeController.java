@@ -85,7 +85,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<EmployeeDTO>> getAllEmploee() {
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployee() {
         List<Employee> employeeList = employeeService.getAll();
 
         return ResponseEntity.ok(employeeList.stream()
@@ -117,6 +117,15 @@ public class EmployeeController {
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
         return new ResponseEntity<>(subEmployees, HttpStatus.OK);
+    }
+
+    @GetMapping("/account")
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployeeByAccountName(@RequestParam("account") String account) {
+        List<Employee> employeeList = employeeService.findEmployeeByAccountName(account);
+
+        return ResponseEntity.ok(employeeList.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList()));
     }
 
 

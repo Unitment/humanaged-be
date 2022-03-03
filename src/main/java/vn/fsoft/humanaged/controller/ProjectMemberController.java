@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectRole;
+import vn.fsoft.humanaged.dto.MemberDTO;
 import vn.fsoft.humanaged.dto.ProjectAndMember;
 import vn.fsoft.humanaged.dto.ProjectMemberDTO;
 import vn.fsoft.humanaged.service.IProjectMemberService;
@@ -64,9 +65,9 @@ public class ProjectMemberController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addEmployeeToProject(@RequestParam("project") String idProject, @RequestParam("employee") String idEmployee) {
+    public ResponseEntity<String> addEmployeeToProject(@RequestBody MemberDTO memberDTO) {
 
-        projectMemberService.addEmployeeToProject(idEmployee, idProject, ProjectRole.MEMBER);
+        projectMemberService.addEmployeeToProject(memberDTO);
 
         return new ResponseEntity<>("Successful", HttpStatus.OK);
     }
