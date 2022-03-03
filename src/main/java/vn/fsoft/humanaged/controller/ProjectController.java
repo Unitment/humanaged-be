@@ -34,14 +34,14 @@ public class ProjectController {
         return new ResponseEntity<>(subProjects, HttpStatus.OK);
     }
 
-    @GetMapping("/{state}")
+    /* @GetMapping("/{state}") // Conflicts with @GetMapping("/{id}")
     public ResponseEntity<List<ProjectDTO>> getProjectByState(@PathVariable("state") ProjectState state) {
         List<Project> projects = projectService.findProjectByState(state);
         List<ProjectDTO> subProjects = projects.stream()
                 .map(project -> modelMapper.map(project, ProjectDTO.class))
                 .collect(Collectors.toList());
         return new ResponseEntity<>(subProjects, HttpStatus.OK);
-    }
+    } */
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ProjectDTO> getById(@PathVariable("id") String id) {
@@ -79,15 +79,11 @@ public class ProjectController {
                         .collect(Collectors.toList())
         );
     }
-
-//    @PostMapping()
-//    public ResponseEntity<ProjectDTO> save(@RequestBody ProjectDTO entity) {
-//        return ResponseEntity.ok(projectService.saveDTO(entity));
-//    }
-
-    @PostMapping
-    public ResponseEntity<Project> saveProject(@RequestBody Project project) {
-        return ResponseEntity.ok(projectService.save(project));
+    
+    @PostMapping()
+    public ResponseEntity<ProjectDTO> createProject(@RequestBody ProjectDTO projectDTO) {
+        projectService.saveDTO(projectDTO);
+        return new ResponseEntity<>(modelMapper.map(projectDTO, ProjectDTO.class), HttpStatus.OK);
     }
 
     @PutMapping()

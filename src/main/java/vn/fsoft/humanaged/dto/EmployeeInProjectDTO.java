@@ -11,7 +11,6 @@ import vn.fsoft.humanaged.domain.ProjectRole;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmployeeInProjectDTO {
-    private String id;
-    private String name;
+    private String accountName;
     private ProjectRole role;
 }
