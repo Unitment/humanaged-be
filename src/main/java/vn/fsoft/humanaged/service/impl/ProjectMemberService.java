@@ -2,13 +2,12 @@ package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import vn.fsoft.humanaged.domain.*;
 import vn.fsoft.humanaged.dto.ProjectAndMember;
-import vn.fsoft.humanaged.domain.ProjectMember;
-import vn.fsoft.humanaged.domain.ProjectMemberKey;
-import vn.fsoft.humanaged.domain.ProjectRole;
 import vn.fsoft.humanaged.repository.IProjectMemberRepository;
+import vn.fsoft.humanaged.service.IEmployeeService;
 import vn.fsoft.humanaged.service.IProjectMemberService;
+import vn.fsoft.humanaged.service.IProjectService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +18,12 @@ public class ProjectMemberService implements IProjectMemberService {
 
     @Autowired
     private IProjectMemberRepository projectMemberRepository;
+
+    @Autowired
+    private IProjectService projectService;
+
+    @Autowired
+    private IEmployeeService employeeService;
 
     @Override
     public List<ProjectMember> getAll() {
@@ -66,13 +71,29 @@ public class ProjectMemberService implements IProjectMemberService {
     }
 
     @Override
+    public void addEmployeeToProject(String idEmployee, String idProject, ProjectRole role) {
+        Optional<Employee> emp = employeeService.getById(idEmployee);
+        Optional<Project> prj = projectService.getById(idProject);
+
+        ProjectMember projectMember = new ProjectMember(new ProjectMemberKey(idEmployee, idProject),
+                emp.get(), prj.get(), role);
+
+        projectMemberRepository.save(projectMember);
+    }
+
+    @Override
+    public boolean isProjectHasLeader(String projectID) {
+        return !projectMemberRepository.isProjectHasLeader(projectID).isEmpty();
+    }
+
+    @Override
     public List<ProjectAndMember> findProjectAndMemberByPMId(String employeeId) {
         List<ProjectMember> temp1 = findMemberByEmployeeId(employeeId);
         List<ProjectAndMember> temp2 = new ArrayList<>();
         for (ProjectMember projectMember : temp1) {
             temp2.add(new ProjectAndMember(projectMember.getProject(), findMemberByProjectId(projectMember.getId().getProjectID())));
         }
-        
+
         return temp2;
     }
 }

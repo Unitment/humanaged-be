@@ -34,7 +34,7 @@ public class ProjectService implements IProjectService {
 
     @Override
     public Optional<Project> getById(String key) {
-        return Optional.empty();
+        return projectRepository.findById(key);
     }
 
     @Override
