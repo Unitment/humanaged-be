@@ -36,5 +36,5 @@ public class EmployeeDetailDTO {
 
     private Status status;
 
-    private Set<ProjectMemberProjectsDTO> projects;
+    private Set<ProjectMemberProjectsDTO> projectMember;
 }

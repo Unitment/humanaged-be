@@ -63,4 +63,6 @@ public class EmployeeDTO {
                 employeeFlatDTO.getRole()
         );
     }
+
+    private Status status;
 }

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.Project;
 import vn.fsoft.humanaged.domain.ProjectState;
+import vn.fsoft.humanaged.dto.EmployeeDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
 import vn.fsoft.humanaged.service.IProjectService;
 
@@ -45,6 +46,26 @@ public class ProjectController {
         Optional<Project> projectOptional = projectService.getById(id);
         return projectOptional.map(project -> ResponseEntity.ok(modelMapper.map(project, ProjectDTO.class)))
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{id}")
+    @ResponseBody
+    public ResponseEntity<ProjectDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id){
+        Optional<Project> oProject = projectService.getById(id);
+
+        if(oProject.isPresent()){
+            Project project = oProject.get();
+            ProjectDetailDTO projectDetailDTO = modelMapper.map(project, ProjectDetailDTO.class);
+            projectDetailDTO.setProjectMember(
+                    project.getProjectMembers().stream().map(pm -> {
+                        ProjectMemberEmployeesDTO pmd = modelMapper.map(pm, ProjectMemberEmployeesDTO.class);
+                        pmd.setEmployee(modelMapper.map(pm.getEmployee(), EmployeeDTO.class));
+                        return pmd;
+                    }).collect(Collectors.toSet())
+            );
+
+            return new ResponseEntity<>(projectDetailDTO, HttpStatus.OK);
+        } else return new ResponseEntity<ProjectDetailDTO>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping()
