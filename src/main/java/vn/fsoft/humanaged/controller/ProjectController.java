@@ -54,29 +54,16 @@ public class ProjectController {
     @ResponseBody
     public ResponseEntity<ProjectDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
         Optional<Project> oProject = projectService.getById(id);
-<<<<<<< HEAD
-        
-        if(oProject.isPresent()){
-            Project project = oProject.get(); 
-            ProjectDetailDTO projectDetailDTO = modelMapper.map(project, ProjectDetailDTO.class);
-            projectDetailDTO.setProjectMembers(
-                project.getProjectMembers().stream().map(pm -> {
-                    ProjectMemberEmployeesDTO pmd = modelMapper.map(pm, ProjectMemberEmployeesDTO.class);
-                    pmd.setEmployee(modelMapper.map(pm.getEmployee(), EmployeeDTO.class));
-                    return pmd;
-                }).collect(Collectors.toSet())
-=======
 
         if (oProject.isPresent()) {
             Project project = oProject.get();
             ProjectDetailDTO projectDetailDTO = modelMapper.map(project, ProjectDetailDTO.class);
-            projectDetailDTO.setProjectMember(
+            projectDetailDTO.setProjectMembers(
                     project.getProjectMembers().stream().map(pm -> {
                         ProjectMemberEmployeesDTO pmd = modelMapper.map(pm, ProjectMemberEmployeesDTO.class);
                         pmd.setEmployee(modelMapper.map(pm.getEmployee(), EmployeeDTO.class));
                         return pmd;
                     }).collect(Collectors.toSet())
->>>>>>> origin/dev
             );
 
             return new ResponseEntity<>(projectDetailDTO, HttpStatus.OK);
