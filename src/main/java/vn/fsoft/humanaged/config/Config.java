@@ -1,10 +1,6 @@
 package vn.fsoft.humanaged.config;
 
-import java.time.LocalDate;
-import java.util.List;
-
 import org.modelmapper.ModelMapper;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,16 +8,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 public class Config {
 
-     @Bean
-     public BCryptPasswordEncoder passwordEncoder() {
-         return new BCryptPasswordEncoder();
-     }
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
     public ModelMapper modelMapper() {
-        ModelMapper modelMapper = new ModelMapper();
-        return modelMapper;
+        return new ModelMapper();
     }
+<<<<<<< HEAD
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(IEmployeeRepository employeeRepository, IProjectRepository projectRepository, IProjectMemberRepository projectMemberRepository){
@@ -40,4 +36,6 @@ public class Config {
 //            // projectMemberRepository.save(projectMember1);
 //        };
 //    }
+=======
+>>>>>>> origin/dev
 }

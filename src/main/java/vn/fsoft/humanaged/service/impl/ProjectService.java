@@ -39,8 +39,12 @@ public class ProjectService implements IProjectService {
 
     @Override
     public Project save(Project entity) {
-        return null;
+        return projectRepository.save(entity);
     }
+
+//    public Project createProject(NewProject project) {
+//
+//    }
 
     @Override
     public void deleteById(String key) {

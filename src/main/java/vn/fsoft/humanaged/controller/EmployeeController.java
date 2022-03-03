@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/employee")
 public class EmployeeController {
-
     @Autowired
     private IEmployeeService employeeService;
 
@@ -36,7 +35,7 @@ public class EmployeeController {
     private ModelMapper modelMapper;
 
     @PostMapping
-    public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO){
+    public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO) {
 
         employeeDTO.setStatus(Status.SUPPORT);
         employeeDTO.setCountry("Việt Nam");
@@ -48,34 +47,34 @@ public class EmployeeController {
                 SystemRole.ROLE_USER
         ));
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(employeeService.save(employee),EmployeeDTO.class));
+        return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(employeeService.save(employee), EmployeeDTO.class));
     }
 
     @PostMapping("/import")
-    public ResponseEntity<Void> importEmployeeFromFile(@RequestBody List<EmployeeFlatDTO> employeeFlatList){
-       employeeFlatList.forEach(
-               employeeFlat -> {
-                   EmployeeDTO employeeDTO = new EmployeeDTO(employeeFlat);
-                   Employee employee = convertToEntity(employeeDTO);
+    public ResponseEntity<Void> importEmployeeFromFile(@RequestBody List<EmployeeFlatDTO> employeeFlatList) {
+        employeeFlatList.forEach(
+                employeeFlat -> {
+                    EmployeeDTO employeeDTO = new EmployeeDTO(employeeFlat);
+                    Employee employee = convertToEntity(employeeDTO);
 
-                   if (!accountService.isExist(employee.getAccount().getAccountName())){
-                       employee.getAccount().setPassword(bCryptPasswordEncoder.encode(accountService.generateAccountForName(employee.getName())));
-                       employeeService.save(employee);
-                   }
-               }
-       );
+                    if (!accountService.isExist(employee.getAccount().getAccountName())) {
+                        employee.getAccount().setPassword(bCryptPasswordEncoder.encode(accountService.generateAccountForName(employee.getName())));
+                        employeeService.save(employee);
+                    }
+                }
+        );
 
-       return ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
 
     }
 
     @PostMapping("/check-file")
-    public ResponseEntity<HashMap<String, String>> checkData(@RequestBody List<EmployeeFlatDTO> employeeFlatList){
+    public ResponseEntity<HashMap<String, String>> checkData(@RequestBody List<EmployeeFlatDTO> employeeFlatList) {
         HashMap<String, String> existAccountNameList = new HashMap<>();
         employeeFlatList.forEach(
                 employeeFlat -> {
 
-                    if (accountService.isExist(employeeFlat.getAccountName())){
+                    if (accountService.isExist(employeeFlat.getAccountName())) {
                         existAccountNameList.put(employeeFlat.getAccountName(),
                                 employeeFlat.getName());
                     }
@@ -86,7 +85,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<EmployeeDTO>> getAllEmploee(){
+    public ResponseEntity<List<EmployeeDTO>> getAllEmploee() {
         List<Employee> employeeList = employeeService.getAll();
 
         return ResponseEntity.ok(employeeList.stream()
@@ -95,7 +94,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable("id") String id){
+    public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable("id") String id) {
         Optional<Employee> employeeOptional = employeeService.getById(id);
 
         return employeeOptional
@@ -104,31 +103,30 @@ public class EmployeeController {
     }
 
     @PutMapping
-    public ResponseEntity<EmployeeDTO> update(@RequestBody EmployeeDTO employeeDTO){
+    public ResponseEntity<EmployeeDTO> update(@RequestBody EmployeeDTO employeeDTO) {
 
         Employee employee = convertToEntity(employeeDTO);
 
-        return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee),EmployeeDTO.class));
+        return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee), EmployeeDTO.class));
     }
 
     @GetMapping("/status/{status}")
-    public ResponseEntity<List<EmployeeDTO>> getEmployeeByState(@PathVariable("status") Status status){
+    public ResponseEntity<List<EmployeeDTO>> getEmployeeByState(@PathVariable("status") Status status) {
         List<Employee> employees = employeeService.findEmployeeByStatus(status);
         List<EmployeeDTO> subEmployees = employees.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
-        return new ResponseEntity<>(subEmployees,HttpStatus.OK);
+        return new ResponseEntity<>(subEmployees, HttpStatus.OK);
     }
 
 
-
-    public Employee convertToEntity(EmployeeDTO employeeDTO){
+    public Employee convertToEntity(EmployeeDTO employeeDTO) {
         Employee employee = modelMapper.map(employeeDTO, Employee.class);
 
         return employee;
     }
 
-    public EmployeeDTO convertToDTO(Employee employee){
+    public EmployeeDTO convertToDTO(Employee employee) {
         EmployeeDTO employeeDTO = modelMapper.map(employee, EmployeeDTO.class);
 
         return employeeDTO;
@@ -136,6 +134,7 @@ public class EmployeeController {
 
     @GetMapping("/detail/{id}")
     @ResponseBody
+<<<<<<< HEAD
     public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id){
         Employee employee = employeeService.getById(id).orElse(new Employee());
         EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
@@ -148,6 +147,22 @@ public class EmployeeController {
         );
 
         return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
+=======
+    public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
+        Optional<Employee> oEmployee = employeeService.getById(id);
+        if (oEmployee.isPresent()) {
+            Employee employee = oEmployee.get();
+            EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
+            employeeProjectDTO.setProjectMember(
+                    employee.getProjectMembers().stream().map(pm -> {
+                        ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
+                        pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
+                        return pmd;
+                    }).collect(Collectors.toSet())
+            );
+            return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
+        } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+>>>>>>> origin/dev
     }
 
 }
