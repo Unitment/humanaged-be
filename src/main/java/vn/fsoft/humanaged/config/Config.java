@@ -17,7 +17,6 @@ public class Config {
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
-<<<<<<< HEAD
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(IEmployeeRepository employeeRepository, IProjectRepository projectRepository, IProjectMemberRepository projectMemberRepository){
@@ -36,6 +35,4 @@ public class Config {
 //            // projectMemberRepository.save(projectMember1);
 //        };
 //    }
-=======
->>>>>>> origin/dev
 }

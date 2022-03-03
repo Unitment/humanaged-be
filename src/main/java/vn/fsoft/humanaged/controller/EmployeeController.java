@@ -134,26 +134,12 @@ public class EmployeeController {
 
     @GetMapping("/detail/{id}")
     @ResponseBody
-<<<<<<< HEAD
-    public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id){
-        Employee employee = employeeService.getById(id).orElse(new Employee());
-        EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
-        employeeProjectDTO.setProjectMembers(
-            employee.getProjects().stream().map(pm -> {
-                ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
-                pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
-                return pmd;
-            }).collect(Collectors.toSet())
-        );
-
-        return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
-=======
     public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
         Optional<Employee> oEmployee = employeeService.getById(id);
         if (oEmployee.isPresent()) {
             Employee employee = oEmployee.get();
             EmployeeDetailDTO employeeProjectDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
-            employeeProjectDTO.setProjectMember(
+            employeeProjectDTO.setProjectMembers(
                     employee.getProjectMembers().stream().map(pm -> {
                         ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
                         pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
@@ -162,7 +148,6 @@ public class EmployeeController {
             );
             return new ResponseEntity<>(employeeProjectDTO, HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
->>>>>>> origin/dev
     }
 
 }
