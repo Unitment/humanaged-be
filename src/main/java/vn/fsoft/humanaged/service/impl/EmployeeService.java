@@ -49,8 +49,4 @@ public class EmployeeService implements IEmployeeService {
         return employeeRepository.findAllByStatus(status);
     }
 
-    @Override
-    public List<Employee> findEmployeeByAccountName(String accountName) {
-        return employeeRepository.findAllByAccount_AccountNameContaining(accountName);
-    }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import vn.fsoft.humanaged.domain.Status;
@@ -16,4 +17,5 @@ public interface IEmployeeRepository extends JpaRepository<Employee, String> {
 
     @Query("SELECT e FROM Employee e WHERE e.account.accountName = ?1")
     Optional<Employee> findByAccountName(String accountName);
+
 }

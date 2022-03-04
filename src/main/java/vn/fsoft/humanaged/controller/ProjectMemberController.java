@@ -65,11 +65,11 @@ public class ProjectMemberController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addEmployeeToProject(@RequestBody MemberDTO memberDTO) {
+    public ResponseEntity<Void> addEmployeeToProject(@RequestBody MemberDTO memberDTO) {
 
         projectMemberService.addEmployeeToProject(memberDTO);
 
-        return new ResponseEntity<>("Successful", HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
