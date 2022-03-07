@@ -85,8 +85,13 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<EmployeeDTO>> getAllEmployee() {
-        List<Employee> employeeList = employeeService.getAll();
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployee(@RequestParam(required = false) String projectID) {
+        List<Employee> employeeList;
+        if (projectID == null) {
+            employeeList = employeeService.getAll();
+        } else {
+            employeeList = employeeService.findAllExceptProject(projectID);
+        }
 
         return ResponseEntity.ok(employeeList.stream()
                 .map(this::convertToDTO)

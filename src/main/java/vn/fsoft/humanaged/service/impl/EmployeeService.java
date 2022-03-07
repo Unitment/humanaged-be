@@ -49,4 +49,9 @@ public class EmployeeService implements IEmployeeService {
         return employeeRepository.findAllByStatus(status);
     }
 
+    @Override
+    public List<Employee> findAllExceptProject(String projectID) {
+        return employeeRepository.findAllExceptProject(projectID);
+    }
+
 }
