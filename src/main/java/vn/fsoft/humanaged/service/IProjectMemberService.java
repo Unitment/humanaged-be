@@ -1,6 +1,8 @@
 package vn.fsoft.humanaged.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectMemberKey;
 import vn.fsoft.humanaged.domain.ProjectRole;
@@ -23,4 +25,7 @@ public interface IProjectMemberService extends IService<ProjectMember, ProjectMe
     void addEmployeeToProject(MemberDTO memberDTO);
 
     boolean isProjectHasLeader(String projectID);
+
+    @Transactional
+    boolean deleteEmployeeFromProject(String projectId, String EmployeeId);
 }

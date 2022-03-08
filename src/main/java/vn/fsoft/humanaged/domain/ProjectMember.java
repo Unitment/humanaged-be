@@ -32,6 +32,4 @@ public class ProjectMember {
 
     @Enumerated(EnumType.STRING)
     private ProjectRole role;
-
-    
 }
