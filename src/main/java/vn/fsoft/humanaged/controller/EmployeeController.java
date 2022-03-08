@@ -43,7 +43,7 @@ public class EmployeeController {
 
         employee.setAccount(new Account(
                 accountService.generateAccountForName(employee.getName()),
-                bCryptPasswordEncoder.encode(employee.getAccount().getAccountName()),
+                bCryptPasswordEncoder.encode(accountService.generateAccountForName(employee.getName())),
                 SystemRole.ROLE_USER
         ));
 
@@ -85,8 +85,13 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<EmployeeDTO>> getAllEmployee() {
-        List<Employee> employeeList = employeeService.getAll();
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployee(@RequestParam(required = false) String projectID) {
+        List<Employee> employeeList;
+        if (projectID == null) {
+            employeeList = employeeService.getAll();
+        } else {
+            employeeList = employeeService.findAllExceptProject(projectID);
+        }
 
         return ResponseEntity.ok(employeeList.stream()
                 .map(this::convertToDTO)
@@ -118,16 +123,6 @@ public class EmployeeController {
                 .collect(Collectors.toList());
         return new ResponseEntity<>(subEmployees, HttpStatus.OK);
     }
-
-    @GetMapping("/account")
-    public ResponseEntity<List<EmployeeDTO>> getAllEmployeeByAccountName(@RequestParam("account") String account) {
-        List<Employee> employeeList = employeeService.findEmployeeByAccountName(account);
-
-        return ResponseEntity.ok(employeeList.stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList()));
-    }
-
 
     public Employee convertToEntity(EmployeeDTO employeeDTO) {
         Employee employee = modelMapper.map(employeeDTO, Employee.class);

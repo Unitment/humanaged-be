@@ -50,7 +50,8 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public List<Employee> findEmployeeByAccountName(String accountName) {
-        return employeeRepository.findAllByAccount_AccountNameContaining(accountName);
+    public List<Employee> findAllExceptProject(String projectID) {
+        return employeeRepository.findAllExceptProject(projectID);
     }
+
 }

@@ -80,6 +80,12 @@ public class ProjectMemberService implements IProjectMemberService {
 
         for (String empID : memberDTO.getEmployeeIDList()) {
             Optional<Employee> emp = employeeService.getById(empID);
+            emp.ifPresent(employee -> {
+                if (employee.getStatus() == Status.SUPPORT) {
+                    employee.setStatus(Status.WORKING);
+                    employeeService.save(employee);
+                }
+            });
             ProjectMember projectMember = new ProjectMember(new ProjectMemberKey(empID, memberDTO.getProjectID()),
                     emp.get(), prj.get(), memberDTO.getRole());
 

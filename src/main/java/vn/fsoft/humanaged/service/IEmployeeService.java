@@ -10,5 +10,5 @@ public interface IEmployeeService extends IService<Employee, String> {
 
     List<Employee> findEmployeeByStatus(Status status);
 
-    List<Employee> findEmployeeByAccountName(String accountName);
+    List<Employee> findAllExceptProject(String projectID);
 }
