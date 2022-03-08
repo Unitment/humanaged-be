@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectRole;
+import vn.fsoft.humanaged.dto.MemberDTO;
 import vn.fsoft.humanaged.dto.ProjectAndMember;
 import vn.fsoft.humanaged.dto.ProjectMemberDTO;
 import vn.fsoft.humanaged.service.IProjectMemberService;
@@ -64,11 +65,11 @@ public class ProjectMemberController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addEmployeeToProject(@RequestParam("project") String idProject, @RequestParam("employee") String idEmployee) {
+    public ResponseEntity<Void> addEmployeeToProject(@RequestBody MemberDTO memberDTO) {
 
-        projectMemberService.addEmployeeToProject(idEmployee, idProject, ProjectRole.MEMBER);
+        projectMemberService.addEmployeeToProject(memberDTO);
 
-        return new ResponseEntity<>("Successful", HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
@@ -76,5 +77,11 @@ public class ProjectMemberController {
     public ResponseEntity<Boolean> checkIfProjectHasLeader(@PathVariable("id") String projectID) {
 
         return ResponseEntity.ok(projectMemberService.isProjectHasLeader(projectID));
+    }
+
+    @DeleteMapping("project/{pid}/employee/{eid}")
+    public ResponseEntity<Boolean> deleteEmployeeFromProject(@PathVariable("eid") String eid, @PathVariable("pid") String pid){
+        System.out.println("delete");
+        return ResponseEntity.ok(projectMemberService.deleteEmployeeFromProject(eid, pid));
     }
 }

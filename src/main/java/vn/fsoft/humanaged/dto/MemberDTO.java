@@ -6,11 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vn.fsoft.humanaged.domain.ProjectRole;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeInProjectDTO {
-    private String accountName;
+public class MemberDTO {
+    private String projectID;
+    List<String> employeeIDList = new ArrayList<>();
     private ProjectRole role;
 }

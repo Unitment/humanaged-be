@@ -42,13 +42,9 @@ public class ProjectService implements IProjectService {
         return projectRepository.save(entity);
     }
 
-//    public Project createProject(NewProject project) {
-//
-//    }
-
     @Override
     public void deleteById(String key) {
-
+        projectRepository.deleteById(key);
     }
 
     @Override
@@ -63,16 +59,15 @@ public class ProjectService implements IProjectService {
         List<EmployeeInProjectDTO> employees = entity.getEmployeeInProjectList();
         Set<ProjectMember> projectMembers = new HashSet<>();
         employees.forEach(employee -> {
-            Employee member = employeeRepository.findById(employee.getId())
-                    .orElseThrow(() -> new RuntimeException("Employee not found"));
-            employee.setName(member.getName());
+            Employee member = employeeRepository.findByAccountName(employee.getAccountName())
+                    .orElseThrow(() -> new RuntimeException(
+                            "Employee " + "[ " + employee.getAccountName() + " ]" + " not found"));
             ProjectMember projectMember = new ProjectMember();
             projectMember.setEmployee(member);
             projectMember.setProject(newProject);
             projectMember.setRole(employee.getRole());
-            ProjectMemberKey id = new ProjectMemberKey(employee.getId(), newProject.getId());
+            ProjectMemberKey id = new ProjectMemberKey(member.getId(), newProject.getId());
             projectMember.setId(id);
-            // projectRepositoryMember.save(projectMember);
             projectMembers.add(projectMember);
         });
         newProject.setProjectMembers(projectMembers);
@@ -90,14 +85,14 @@ public class ProjectService implements IProjectService {
         List<EmployeeInProjectDTO> employees = entity.getEmployeeInProjectList();
         Set<ProjectMember> projectMembers = new HashSet<>();
         employees.forEach(employee -> {
-            Employee member = employeeRepository.findById(employee.getId())
-                    .orElseThrow(() -> new RuntimeException("Employee not found"));
-            employee.setName(member.getName());
+            Employee member = employeeRepository.findByAccountName(employee.getAccountName())
+                    .orElseThrow(() -> new RuntimeException(
+                            "Employee " + "[ " + employee.getAccountName() + " ]" + " not found"));
             ProjectMember projectMember = new ProjectMember();
             projectMember.setEmployee(member);
             projectMember.setProject(project);
             projectMember.setRole(employee.getRole());
-            ProjectMemberKey id = new ProjectMemberKey(employee.getId(), project.getId());
+            ProjectMemberKey id = new ProjectMemberKey(member.getId(), project.getId());
             projectMember.setId(id);
             projectMembers.add(projectMember);
         });
