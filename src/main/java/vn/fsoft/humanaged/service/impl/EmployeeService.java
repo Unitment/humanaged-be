@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
+import vn.fsoft.humanaged.domain.ProjectRole;
+import vn.fsoft.humanaged.domain.ProjectState;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
+import java.lang.Thread.State;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,8 +48,9 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public List<Employee> findEmployeeByStatus(Status status) {
-        return employeeRepository.findAllByStatus(status);
+    public List<Employee> findEmployeeByStatus(Status status, boolean ignoreDeleted) {
+        if(ignoreDeleted) return this.employeeRepository.findByStatusAndIsDeleteFalse(status);
+        else return this.employeeRepository.findAllByStatus(status);
     }
 
     @Override
@@ -54,4 +58,14 @@ public class EmployeeService implements IEmployeeService {
         return employeeRepository.findAllExceptProject(projectID);
     }
 
+    @Override
+    public Employee updateEmployeeIsDelete(String id, boolean isDelete) {
+        Optional<Employee> oEmp = this.employeeRepository.findById(id);
+
+        if(oEmp.isPresent()){
+            Employee employee = oEmp.get();
+            employee.setDelete(isDelete);
+            return this.employeeRepository.save(employee);
+        } else return null;
+    }
 }

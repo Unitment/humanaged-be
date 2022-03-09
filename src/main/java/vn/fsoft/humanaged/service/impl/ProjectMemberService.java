@@ -110,11 +110,8 @@ public class ProjectMemberService implements IProjectMemberService {
     }
 
     @Override
-    public boolean deleteEmployeeFromProject(String employeeId, String projectId) {
-        // long deleteCount = this.projectMemberRepository.deleteByEmployeeIdAndProjectId(employeeId, projectId);
-        // System.out.println(deleteCount);
-        // return deleteCount > 0;
-
-        return this.projectMemberRepository.deleteByEmployeeIdAndProjectId(employeeId, projectId) > 0; 
+    @Transactional
+    public boolean deleteEmployeeFromProject(String employeeId, String projectId) {        
+        return this.projectMemberRepository.removeEmployeeFromProject(employeeId, projectId) > 0;
     }
 }

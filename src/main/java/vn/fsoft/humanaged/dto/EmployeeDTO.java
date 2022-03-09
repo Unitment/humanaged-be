@@ -41,6 +41,8 @@ public class EmployeeDTO {
 
     private Status status;
 
+    private boolean isDelete;
+
     private Account account;
 
     public EmployeeDTO(EmployeeFlatDTO employeeFlatDTO) {

@@ -116,8 +116,17 @@ public class EmployeeController {
     }
 
     @GetMapping("/status/{status}")
-    public ResponseEntity<List<EmployeeDTO>> getEmployeeByState(@PathVariable("status") Status status) {
-        List<Employee> employees = employeeService.findEmployeeByStatus(status);
+    public ResponseEntity<List<EmployeeDTO>> getWorkingEmployeeByStatus(@PathVariable("status") Status status) {
+        List<Employee> employees = employeeService.findEmployeeByStatus(status, true);
+        List<EmployeeDTO> subEmployees = employees.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return new ResponseEntity<>(subEmployees, HttpStatus.OK);
+    }
+
+    @GetMapping("/status/{status}/all")
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployeeByStatus(@PathVariable("status") Status status) {
+        List<Employee> employees = employeeService.findEmployeeByStatus(status, false);
         List<EmployeeDTO> subEmployees = employees.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
@@ -154,4 +163,13 @@ public class EmployeeController {
         } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<EmployeeDTO> removeEmployee(@PathVariable("id") String id){
+        Employee deletedEmployee = this.employeeService.updateEmployeeIsDelete(id, true);
+        EmployeeDTO employeeDTO = null;
+        
+        if(deletedEmployee != null) employeeDTO = modelMapper.map(deletedEmployee, EmployeeDTO.class);
+
+        return ResponseEntity.ok(employeeDTO);
+    }
 }

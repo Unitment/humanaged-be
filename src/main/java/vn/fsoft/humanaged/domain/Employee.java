@@ -10,6 +10,7 @@ import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
+
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -59,16 +60,17 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    @Column(nullable = false, columnDefinition = "bit default 0")
+    private boolean isDelete;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "accountName")
     private Account account;
 
-    // @JsonIgnore
     @OneToOne(mappedBy = "bul")
     @JsonIgnore
     private BusinessUnit businessUnit;
 
-    // @JsonIgnore
     @OneToMany(mappedBy = "employee")
     @JsonIgnore
     private Set<ProjectMember> projectMembers;
