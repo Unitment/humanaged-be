@@ -4,6 +4,7 @@ import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Status;
 
 import java.util.List;
+import java.util.Optional;
 
 // @Service
 public interface IEmployeeService extends IService<Employee, String> {
@@ -13,4 +14,6 @@ public interface IEmployeeService extends IService<Employee, String> {
     List<Employee> findAllExceptProject(String projectID);
 
     Employee updateEmployeeIsDelete(String id, boolean isDelete);
+
+    Optional<Employee> findByAccountName(String accountName);
 }

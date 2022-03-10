@@ -64,4 +64,9 @@ public class EmployeeService implements IEmployeeService {
             return this.employeeRepository.save(employee);
         } else return null;
     }
+
+    @Override
+    public Optional<Employee> findByAccountName(String accountName) {
+        return this.employeeRepository.findByAccountName(accountName);
+    }
 }

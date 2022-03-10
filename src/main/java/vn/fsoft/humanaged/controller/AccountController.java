@@ -7,7 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.Account;
+import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.dto.AccountDTO;
+import vn.fsoft.humanaged.dto.EmployeeDTO;
 import vn.fsoft.humanaged.service.impl.AccountService;
 import vn.fsoft.humanaged.service.impl.EmployeeService;
 
@@ -33,7 +35,7 @@ public class AccountController {
             if (bCryptPasswordEncoder.matches(account.getPassword(),acc.getPassword())) {
                 return ResponseEntity.ok(modelMapper.map(acc,AccountDTO.class));
             }
-            return new ResponseEntity<String>("Wrong Username or Password", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Wrong Username or Password",HttpStatus.BAD_REQUEST);
         }).orElseGet(()->new ResponseEntity<String>("Wrong Username or Password",HttpStatus.BAD_REQUEST));
     }
 
@@ -45,4 +47,14 @@ public class AccountController {
 //                .map(employee -> ResponseEntity.ok(modelMapper.map(employee, EmployeeDTO.class)))
 //                .orElse(ResponseEntity.notFound().build());
 //    }
+
+    @PostMapping("/info")
+    public ResponseEntity<EmployeeDTO> userInfo(@RequestBody Account account){
+
+        Optional<Employee> employeeOptional = employeeService.findByAccountName(account.getAccountName());
+
+        return employeeOptional
+                .map(employee -> ResponseEntity.ok(modelMapper.map(employee, EmployeeDTO.class)))
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
