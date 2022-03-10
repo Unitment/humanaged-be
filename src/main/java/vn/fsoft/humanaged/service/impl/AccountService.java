@@ -42,9 +42,9 @@ public class AccountService implements IAccountService {
         StringBuilder accountNameBuilder = new StringBuilder();
         String[] temp = userName.split(" ");
 
-        accountNameBuilder.append(Normalization.removeAccent(temp[temp.length-1].trim().toLowerCase()));
-        for (int i = 0; i < temp.length-1; i++) {
-            accountNameBuilder.append(temp[i].charAt(0));
+        accountNameBuilder.append(Normalization.removeAccent(temp[temp.length - 1].trim().toLowerCase()));
+        for (int i = 0; i < temp.length - 1; i++) {
+            accountNameBuilder.append(Normalization.removeAccent(temp[i]).charAt(0));
         }
 
         String accountName = accountNameBuilder.toString().trim().toLowerCase();

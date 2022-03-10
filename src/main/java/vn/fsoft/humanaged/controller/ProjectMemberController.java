@@ -78,4 +78,10 @@ public class ProjectMemberController {
 
         return ResponseEntity.ok(projectMemberService.isProjectHasLeader(projectID));
     }
+
+    @DeleteMapping("project/{pid}/employee/{eid}")
+    public ResponseEntity<Boolean> deleteEmployeeFromProject(@PathVariable("eid") String eid, @PathVariable("pid") String pid){
+        System.out.println("delete");
+        return ResponseEntity.ok(projectMemberService.deleteEmployeeFromProject(eid, pid));
+    }
 }

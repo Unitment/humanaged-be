@@ -41,12 +41,16 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void deleteById(String key) {
-
     }
 
     @Override
     public List<Employee> findEmployeeByStatus(Status status) {
         return employeeRepository.findAllByStatus(status);
+    }
+
+    @Override
+    public List<Employee> findAllExceptProject(String projectID) {
+        return employeeRepository.findAllExceptProject(projectID);
     }
 
 }

@@ -2,11 +2,16 @@ package vn.fsoft.humanaged.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import vn.fsoft.humanaged.domain.Project;
 import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectMemberKey;
 import vn.fsoft.humanaged.domain.ProjectRole;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
 
 public interface IProjectMemberRepository extends JpaRepository<ProjectMember, ProjectMemberKey> {
 
@@ -22,4 +27,7 @@ public interface IProjectMemberRepository extends JpaRepository<ProjectMember, P
 
     @Query(value = "select p from ProjectMember as p where p.project.id = ?1 and p.role = 'LEADER'")
     List<ProjectMember> isProjectHasLeader(String projectID);
+
+    @Transactional
+    long deleteByEmployeeIdAndProjectId(String employeeId, String projectId);
 }
