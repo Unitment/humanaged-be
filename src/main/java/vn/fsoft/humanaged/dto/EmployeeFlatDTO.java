@@ -25,6 +25,7 @@ public class EmployeeFlatDTO {
 
     private String mail;
 
+    private String avatar;
     private String country;
 
     private String province;

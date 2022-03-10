@@ -17,14 +17,14 @@ public interface IEmployeeRepository extends JpaRepository<Employee, String> {
     @Query("SELECT e FROM Employee e WHERE e.account.accountName = ?1")
     Optional<Employee> findByAccountName(String accountName);
 
-<<<<<<< HEAD
+
     List<Employee> findAllByAccount_AccountNameContaining(String accountName);
-=======
+
     @Query(value = "SELECT *\n" +
             "FROM employee\n" +
             "WHERE employee.id NOT IN (SELECT id\n" +
             "                         FROM employee AS e INNER JOIN project_member pm ON e.id = pm.employee_id\n" +
             "                         WHERE pm.project_id = :projectID)", nativeQuery = true)
     List<Employee> findAllExceptProject(String projectID);
->>>>>>> 7dc2b05225b13006cfecb8e8c50ae9db82e5c523
+
 }

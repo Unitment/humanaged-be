@@ -8,9 +8,10 @@ public class Normalization {
         String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         temp = pattern.matcher(temp).replaceAll("");
-        return temp.replaceAll("đ", "d"); }
+        return temp.replaceAll("đ", "d");
+    }
 
-    public static void main(String []args){
-        System.out.println(removeAccent("Bùi Thanh Bảo"));
+    public static void main(String[] args) {
+        System.out.println(removeAccent("Lê Cao Ái Ly"));
     }
 }
