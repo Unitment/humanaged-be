@@ -111,7 +111,18 @@ public class ProjectMemberService implements IProjectMemberService {
 
     @Override
     @Transactional
-    public boolean deleteEmployeeFromProject(String employeeId, String projectId) {        
-        return this.projectMemberRepository.removeEmployeeFromProject(employeeId, projectId) > 0;
+    public boolean deleteEmployeeFromProject(String employeeId, String projectId) {
+        boolean isRemove = this.projectMemberRepository.removeEmployeeFromProject(employeeId, projectId) > 0;
+
+        List<ProjectMember> projectMembers = this.projectMemberRepository.findAllByEmployee_Id(employeeId);
+        
+        if(projectMembers.stream().allMatch(pm -> pm.getProject().getState().equals(ProjectState.CLOSED))){
+            this.employeeService.getById(employeeId).ifPresent(e -> {
+                e.setStatus(Status.SUPPORT);
+                this.employeeService.save(e);
+            });
+        }
+
+        return isRemove;
     }
 }

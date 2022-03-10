@@ -4,14 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
-import vn.fsoft.humanaged.domain.ProjectRole;
-import vn.fsoft.humanaged.domain.ProjectState;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
-import java.lang.Thread.State;
 import java.util.List;
 import java.util.Optional;
 

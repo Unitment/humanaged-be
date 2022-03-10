@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.Project;
-import vn.fsoft.humanaged.domain.ProjectState;
 import vn.fsoft.humanaged.dto.EmployeeDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
 import vn.fsoft.humanaged.dto.ProjectDetailDTO;
