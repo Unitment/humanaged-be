@@ -59,4 +59,9 @@ public class AccountService implements IAccountService {
     public boolean isExist(String accountName) {
         return accountRepository.existsAccountByAccountNameEquals(accountName);
     }
+
+    @Override
+    public Optional<Account> getAccountByAccountName(String accountName) {
+        return accountRepository.findById(accountName);
+    }
 }
