@@ -29,6 +29,8 @@ public class EmployeeDTO {
 
     private String mail;
 
+    private String avatar;
+
     private String country;
 
     private String province;
@@ -53,6 +55,7 @@ public class EmployeeDTO {
         this.gender = employeeFlatDTO.getGender();
         this.phoneNumber = employeeFlatDTO.getPhoneNumber();
         this.mail = employeeFlatDTO.getMail();
+        this.avatar = employeeFlatDTO.getAvatar();
         this.country = employeeFlatDTO.getCountry();
         this.province = employeeFlatDTO.getProvince();
         this.district = employeeFlatDTO.getDistrict();

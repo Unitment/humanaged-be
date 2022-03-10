@@ -40,6 +40,8 @@ public class Employee {
 
     private String mail;
 
+    private String avatar;
+
     private String phoneNumber;
 
     @Nationalized

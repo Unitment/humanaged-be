@@ -1,14 +1,14 @@
 package vn.fsoft.humanaged.dto;
 
-import java.time.LocalDate;
-import java.util.Set;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vn.fsoft.humanaged.domain.Gender;
 import vn.fsoft.humanaged.domain.Status;
+
+import java.time.LocalDate;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,6 +24,8 @@ public class EmployeeDetailDTO {
     private Gender gender;
 
     private String mail;
+
+    private String avatar;
 
     private String country;
 
