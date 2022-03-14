@@ -41,4 +41,8 @@ public class District {
     @OneToMany(mappedBy = "district")
     @JsonIgnore
     private Set<Ward> wards;
+
+    @OneToMany(mappedBy = "district")
+    @JsonIgnore
+    private Set<Employee> employees;
 }

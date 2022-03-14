@@ -47,14 +47,17 @@ public class Employee {
     @Nationalized
     private String country;
 
-    @Nationalized
-    private String province;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @MapsId("provinceID")
+    private Province province;
 
-    @Nationalized
-    private String district;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @MapsId("districtID")
+    private District district;
 
-    @Nationalized
-    private String ward;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @MapsId("wardID")
+    private Ward ward;
 
     @Nationalized
     private String address;

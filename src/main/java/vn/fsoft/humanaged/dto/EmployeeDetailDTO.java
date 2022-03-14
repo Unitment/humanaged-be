@@ -29,11 +29,11 @@ public class EmployeeDetailDTO {
 
     private String country;
 
-    private String province;
+    private String provinceName;
 
-    private String district;
+    private String districtName;
 
-    private String ward;
+    private String wardName;
 
     private Status status;
 

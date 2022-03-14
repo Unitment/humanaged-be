@@ -37,4 +37,8 @@ public class Province {
     @OneToMany(mappedBy = "province")
     @JsonIgnore
     private Set<Ward> wards;
+
+    @OneToMany(mappedBy = "province")
+    @JsonIgnore
+    private Set<Employee> employees;
 }

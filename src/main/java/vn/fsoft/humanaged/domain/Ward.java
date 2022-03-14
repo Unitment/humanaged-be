@@ -1,10 +1,15 @@
 package vn.fsoft.humanaged.domain;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import org.hibernate.annotations.Nationalized;
 
@@ -36,4 +41,8 @@ public class Ward {
     @ManyToOne(fetch = FetchType.EAGER)
     @MapsId("provinceID")
     private Province province;
+
+    @OneToMany(mappedBy = "ward")
+    @JsonIgnore
+    private Set<Employee> employees;
 }
