@@ -30,11 +30,11 @@ public class Province {
 
     private String code;
 
-    @OneToMany(mappedBy = "provience")
+    @OneToMany(mappedBy = "province")
     @JsonIgnore
     private Set<District> districts;
 
-    @OneToMany(mappedBy = "provience")
+    @OneToMany(mappedBy = "province")
     @JsonIgnore
     private Set<Ward> wards;
 }
