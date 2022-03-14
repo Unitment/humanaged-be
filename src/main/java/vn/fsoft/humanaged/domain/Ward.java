@@ -1,15 +1,10 @@
 package vn.fsoft.humanaged.domain;
 
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
-import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import org.hibernate.annotations.Nationalized;
 
@@ -23,7 +18,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class District {
+public class Ward {
     
     @Id
     private int id;
@@ -35,10 +30,10 @@ public class District {
     private String prefix;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @MapsId("districtID")
+    private District district;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @MapsId("provinceID")
     private Province province;
-
-    @OneToMany(mappedBy = "district")
-    @JsonIgnore
-    private Set<Ward> wards;
 }
