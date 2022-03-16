@@ -1,12 +1,10 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
-import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
 import java.util.List;
@@ -17,12 +15,6 @@ public class EmployeeService implements IEmployeeService {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
-
-    @Autowired
-    private IAccountService accountService;
-
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public List<Employee> getAll() {
@@ -45,7 +37,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public List<Employee> findEmployeeByStatus(Status status, boolean ignoreDeleted) {
-        if(ignoreDeleted) return this.employeeRepository.findByStatusAndIsDeleteFalse(status);
+        if (ignoreDeleted) return this.employeeRepository.findByStatusAndIsDeleteFalse(status);
         else return this.employeeRepository.findAllByStatus(status);
     }
 
@@ -58,7 +50,7 @@ public class EmployeeService implements IEmployeeService {
     public Employee updateEmployeeIsDelete(String id, boolean isDelete) {
         Optional<Employee> oEmp = this.employeeRepository.findById(id);
 
-        if(oEmp.isPresent()){
+        if (oEmp.isPresent()) {
             Employee employee = oEmp.get();
             employee.setDelete(isDelete);
             return this.employeeRepository.save(employee);
