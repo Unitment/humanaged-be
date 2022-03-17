@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.domain.Employee;
@@ -29,7 +29,7 @@ public class EmployeeController {
     private IAccountService accountService;
 
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private PasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -164,11 +164,11 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<EmployeeDTO> removeEmployee(@PathVariable("id") String id){
+    public ResponseEntity<EmployeeDTO> removeEmployee(@PathVariable("id") String id) {
         Employee deletedEmployee = this.employeeService.updateEmployeeIsDelete(id, true);
         EmployeeDTO employeeDTO = null;
-        
-        if(deletedEmployee != null) employeeDTO = modelMapper.map(deletedEmployee, EmployeeDTO.class);
+
+        if (deletedEmployee != null) employeeDTO = modelMapper.map(deletedEmployee, EmployeeDTO.class);
 
         return ResponseEntity.ok(employeeDTO);
     }

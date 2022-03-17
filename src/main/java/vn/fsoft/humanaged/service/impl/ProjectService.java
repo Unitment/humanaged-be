@@ -44,7 +44,17 @@ public class ProjectService implements IProjectService {
 
     @Override
     public void deleteById(String key) {
+        Project project = projectRepository.findById(key)
+                .orElseThrow(() -> new RuntimeException("Project not found"));
         projectRepository.deleteById(key);
+        project.getProjectMembers().stream().forEach(projectMember -> {
+            if (projectMember.getEmployee().getProjectMembers().isEmpty()
+                    || projectMember.getEmployee().getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+                            .getState().equals(ProjectState.CLOSED))) {
+                projectMember.getEmployee().setStatus(Status.SUPPORT);
+                employeeRepository.save(projectMember.getEmployee());
+            }
+        });
     }
 
     @Override
@@ -63,6 +73,10 @@ public class ProjectService implements IProjectService {
                     .orElseThrow(() -> new RuntimeException(
                             "Employee " + "[ " + employee.getAccountName() + " ]" + " not found"));
             ProjectMember projectMember = new ProjectMember();
+            if (member.getStatus() == null || member.getStatus().equals(Status.SUPPORT)) {
+                member.setStatus(Status.WORKING);
+                member = employeeRepository.save(member);
+            }
             projectMember.setEmployee(member);
             projectMember.setProject(newProject);
             projectMember.setRole(employee.getRole());
@@ -96,14 +110,45 @@ public class ProjectService implements IProjectService {
             projectMember.setId(id);
             projectMembers.add(projectMember);
         });
-        project.getProjectMembers().clear();
-        project.getProjectMembers().addAll(projectMembers);
+        project.getProjectMembers().stream().forEach(projectMember -> {
+            if (!projectMembers.contains(projectMember)) {
+                // projectRepository.deleteProjectMember(projectMember.getId());
+                if (projectMember.getEmployee().getProjectMembers().size() == 1) {
+                    projectMember.getEmployee().setStatus(Status.SUPPORT);
+                    employeeRepository.save(projectMember.getEmployee());
+                } else if (projectMember.getEmployee().getProjectMembers().stream()
+                        .allMatch(arg0 -> !arg0.getProject().getId().equals(project.getId())
+                                && arg0.getProject().getState().equals(ProjectState.CLOSED))) {
+                    projectMember.getEmployee().setStatus(Status.SUPPORT);
+                    employeeRepository.save(projectMember.getEmployee());
+                }
+            }
+        });
+
         project.setName(entity.getName());
         project.setDescription(entity.getDescription());
         project.setStartDate(entity.getStartDate());
         project.setEndDate(entity.getEndDate());
         project.setState(entity.getState());
 
+        if (project.getState() == ProjectState.CLOSED) {
+            projectMembers.stream().forEach(projectMember -> {
+                if (projectMember.getEmployee().getProjectMembers().stream()
+                        .allMatch(arg0 -> arg0.getProject().getState().equals(ProjectState.CLOSED))) {
+                    projectMember.getEmployee().setStatus(Status.SUPPORT);
+                    projectMember.setEmployee(employeeRepository.save(projectMember.getEmployee()));
+                }
+            });
+        } else {
+            projectMembers.stream().forEach(projectMember -> {
+                if (projectMember.getEmployee().getStatus().equals(Status.SUPPORT)) {
+                    projectMember.getEmployee().setStatus(Status.WORKING);
+                    projectMember.setEmployee(employeeRepository.save(projectMember.getEmployee()));
+                }
+            });
+        }
+        project.getProjectMembers().clear();
+        project.getProjectMembers().addAll(projectMembers);
         entity = modelMapper.map(projectRepository.save(project), ProjectDTO.class);
         entity.setEmployeeInProjectList(employees);
         return entity;
