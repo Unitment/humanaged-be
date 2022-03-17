@@ -5,8 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vn.fsoft.humanaged.domain.Account;
+import vn.fsoft.humanaged.domain.District;
 import vn.fsoft.humanaged.domain.Gender;
+import vn.fsoft.humanaged.domain.Province;
 import vn.fsoft.humanaged.domain.Status;
+import vn.fsoft.humanaged.domain.Ward;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -33,11 +36,11 @@ public class EmployeeDTO {
 
     private String country;
 
-    private String province;
+    private Province province;
 
-    private String district;
+    private District district;
 
-    private String ward;
+    private Ward ward;
 
     private String address;
 

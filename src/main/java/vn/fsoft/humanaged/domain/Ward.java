@@ -36,10 +36,12 @@ public class Ward {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @MapsId("districtID")
+    @JsonIgnore
     private District district;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @MapsId("provinceID")
+    @JsonIgnore
     private Province province;
 
     @OneToMany(mappedBy = "ward")

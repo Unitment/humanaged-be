@@ -40,6 +40,7 @@ public class Employee {
 
     private String mail;
 
+    @Column(length = 1000)
     private String avatar;
 
     private String phoneNumber;

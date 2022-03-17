@@ -2,6 +2,7 @@ package vn.fsoft.humanaged.domain;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -36,10 +37,11 @@ public class District {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @MapsId("provinceID")
+    @JsonIgnore
     private Province province;
 
-    @OneToMany(mappedBy = "district")
-    @JsonIgnore
+    @OneToMany(mappedBy = "district", cascade = CascadeType.ALL)
+    // @JsonIgnore
     private Set<Ward> wards;
 
     @OneToMany(mappedBy = "district")
