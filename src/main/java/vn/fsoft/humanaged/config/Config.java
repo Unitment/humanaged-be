@@ -1,21 +1,11 @@
 package vn.fsoft.humanaged.config;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 
-import org.apache.tomcat.jni.Directory;
-import org.json.simple.JSONArray;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -40,10 +30,13 @@ public class Config {
 
     @Autowired
     IProvinceRepository provinceRepository ;
+
     @Autowired
     IDistrictRepository districtRepository;
+
     @Autowired
     IWardRepository wardRepository;
+    
     @Bean
     public CommandLineRunner commandLineRunner(){
         return args -> {
