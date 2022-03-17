@@ -9,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import vn.fsoft.humanaged.domain.Employee;
+import vn.fsoft.humanaged.domain.Gender;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,6 +29,8 @@ public class UserDetailsImpl implements UserDetails {
 
     private String mail;
 
+    private Gender gender;
+
     private String username;
 
     @JsonIgnore
@@ -44,6 +47,7 @@ public class UserDetailsImpl implements UserDetails {
                 employee.getName(),
                 employee.getAvatar(),
                 employee.getMail(),
+                employee.getGender(),
                 employee.getAccount().getAccountName(),
                 employee.getAccount().getPassword(),
                 authorities
