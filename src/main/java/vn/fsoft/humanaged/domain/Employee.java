@@ -10,6 +10,7 @@ import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -48,16 +49,19 @@ public class Employee {
     @Nationalized
     private String country;
 
+    @Null
     @ManyToOne(fetch = FetchType.EAGER)
-    @MapsId("provinceID")
+    @JoinColumn(name="province_id")
     private Province province;
 
+    @Null
     @ManyToOne(fetch = FetchType.EAGER)
-    @MapsId("districtID")
+    @JoinColumn(name="district_id")
     private District district;
 
+    @Null
     @ManyToOne(fetch = FetchType.EAGER)
-    @MapsId("wardID")
+    @JoinColumn(name="ward_id")
     private Ward ward;
 
     @Nationalized

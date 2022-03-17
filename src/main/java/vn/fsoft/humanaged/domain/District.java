@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
@@ -36,12 +37,12 @@ public class District {
     private String prefix;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @MapsId("provinceID")
-    @JsonIgnore
+    @JoinColumn(name="province_id", insertable = true)
+    // @JsonIgnore
     private Province province;
 
     @OneToMany(mappedBy = "district", cascade = CascadeType.ALL)
-    // @JsonIgnore
+    @JsonIgnore
     private Set<Ward> wards;
 
     @OneToMany(mappedBy = "district")

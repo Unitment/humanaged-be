@@ -1,0 +1,4256 @@
+[
+  {
+    "id": 1,
+    "name": "Bình Chánh",
+    "prefix": "Huyện",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 2,
+    "name": "Bình Tân",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 3,
+    "name": "Bình Thạnh",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 4,
+    "name": "Cần Giờ",
+    "prefix": "Huyện",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 5,
+    "name": "Củ Chi",
+    "prefix": "Huyện",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 6,
+    "name": "Gò Vấp",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 7,
+    "name": "Hóc Môn",
+    "prefix": "Huyện",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 8,
+    "name": "Nhà Bè",
+    "prefix": "Huyện",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 9,
+    "name": "Phú Nhuận",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 10,
+    "name": "Quận 1",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 11,
+    "name": "Quận 10",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 12,
+    "name": "Quận 11",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 13,
+    "name": "Quận 12",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 14,
+    "name": "Quận 2",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 15,
+    "name": "Quận 3",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 16,
+    "name": "Quận 4",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 17,
+    "name": "Quận 5",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 18,
+    "name": "Quận 6",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 19,
+    "name": "Quận 7",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 20,
+    "name": "Quận 8",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 21,
+    "name": "Quận 9",
+    "prefix": "",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 22,
+    "name": "Tân Bình",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 23,
+    "name": "Tân Phú",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 24,
+    "name": "Thủ Đức",
+    "prefix": "Quận",
+    "province": { "id": 1, "name": "Hồ Chí Minh", "code": "SG" }
+  },
+  {
+    "id": 25,
+    "name": "Ba Đình",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 26,
+    "name": "Ba Vì",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 27,
+    "name": "Bắc Từ Liêm",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 28,
+    "name": "Cầu Giấy",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 29,
+    "name": "Chương Mỹ",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 30,
+    "name": "Đan Phượng",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 31,
+    "name": "Đông Anh",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 32,
+    "name": "Đống Đa",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 33,
+    "name": "Gia Lâm",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 34,
+    "name": "Hà Đông",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 35,
+    "name": "Hai Bà Trưng",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 36,
+    "name": "Hoài Đức",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 37,
+    "name": "Hoàn Kiếm",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 38,
+    "name": "Hoàng Mai",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 39,
+    "name": "Long Biên",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 40,
+    "name": "Mê Linh",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 41,
+    "name": "Mỹ Đức",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 42,
+    "name": "Nam Từ Liêm",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 43,
+    "name": "Phú Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 44,
+    "name": "Phúc Thọ",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 45,
+    "name": "Quốc Oai",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 46,
+    "name": "Sóc Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 47,
+    "name": "Sơn Tây",
+    "prefix": "Thị xã",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 48,
+    "name": "Tây Hồ",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 49,
+    "name": "Thạch Thất",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 50,
+    "name": "Thanh Oai",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 51,
+    "name": "Thanh Trì",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 52,
+    "name": "Thanh Xuân",
+    "prefix": "Quận",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 53,
+    "name": "Thường Tín",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 54,
+    "name": "Ứng Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 2, "name": "Hà Nội", "code": "HN" }
+  },
+  {
+    "id": 55,
+    "name": "Cẩm Lệ",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 56,
+    "name": "Hải Châu",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 57,
+    "name": "Hòa Vang",
+    "prefix": "Huyện",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 58,
+    "name": "Hoàng Sa",
+    "prefix": "Huyện",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 59,
+    "name": "Liên Chiểu",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 60,
+    "name": "Ngũ Hành Sơn",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 61,
+    "name": "Sơn Trà",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 62,
+    "name": "Thanh Khê",
+    "prefix": "Quận",
+    "province": { "id": 3, "name": "Đà Nẵng", "code": "DDN" }
+  },
+  {
+    "id": 63,
+    "name": "Bàu Bàng",
+    "prefix": "Huyện",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 64,
+    "name": "Bến Cát",
+    "prefix": "Thị xã",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 65,
+    "name": "Dầu Tiếng",
+    "prefix": "Huyện",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 66,
+    "name": "Dĩ An",
+    "prefix": "Thị xã",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 67,
+    "name": "Phú Giáo",
+    "prefix": "Huyện",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 68,
+    "name": "Tân Uyên",
+    "prefix": "Huyện",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 69,
+    "name": "Thủ Dầu Một",
+    "prefix": "Thị xã",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 70,
+    "name": "Thuận An",
+    "prefix": "Huyện",
+    "province": { "id": 4, "name": "Bình Dương", "code": "BD" }
+  },
+  {
+    "id": 71,
+    "name": "Biên Hòa",
+    "prefix": "Thành phố",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 72,
+    "name": "Cẩm Mỹ",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 73,
+    "name": "Định Quán",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 74,
+    "name": "Long Khánh",
+    "prefix": "Thị xã",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 75,
+    "name": "Long Thành",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 76,
+    "name": "Nhơn Trạch",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 77,
+    "name": "Tân Phú",
+    "prefix": "Quận",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 78,
+    "name": "Thống Nhất",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 79,
+    "name": "Trảng Bom",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 80,
+    "name": "Vĩnh Cửu",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 81,
+    "name": "Xuân Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 5, "name": "Đồng Nai", "code": "DNA" }
+  },
+  {
+    "id": 82,
+    "name": "Cam Lâm",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 83,
+    "name": "Cam Ranh",
+    "prefix": "Thành phố",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 84,
+    "name": "Diên Khánh",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 85,
+    "name": "Khánh Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 86,
+    "name": "Khánh Vĩnh",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 87,
+    "name": "Nha Trang",
+    "prefix": "Thành phố",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 88,
+    "name": "Ninh Hòa",
+    "prefix": "Thị xã",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 89,
+    "name": "Trường Sa",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 90,
+    "name": "Vạn Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 6, "name": "Khánh Hòa", "code": "KH" }
+  },
+  {
+    "id": 91,
+    "name": "An Dương",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 92,
+    "name": "An Lão",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 93,
+    "name": "Bạch Long Vĩ",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 94,
+    "name": "Cát Hải",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 95,
+    "name": "Đồ Sơn",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 96,
+    "name": "Dương Kinh",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 97,
+    "name": "Hải An",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 98,
+    "name": "Hồng Bàng",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 99,
+    "name": "Kiến An",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 100,
+    "name": "Kiến Thụy",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 101,
+    "name": "Lê Chân",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 102,
+    "name": "Ngô Quyền",
+    "prefix": "Quận",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 103,
+    "name": "Thủy Nguyên",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 104,
+    "name": "Tiên Lãng",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 105,
+    "name": "Vĩnh Bảo",
+    "prefix": "Huyện",
+    "province": { "id": 7, "name": "Hải Phòng", "code": "HP" }
+  },
+  {
+    "id": 106,
+    "name": "Bến Lức",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 107,
+    "name": "Cần Đước",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 108,
+    "name": "Cần Giuộc",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 109,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 110,
+    "name": "Đức Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 111,
+    "name": "Đức Huệ",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 112,
+    "name": "Kiến Tường",
+    "prefix": "Thị xã",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 113,
+    "name": "Mộc Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 114,
+    "name": "Tân An",
+    "prefix": "Thành phố",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 115,
+    "name": "Tân Hưng",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 116,
+    "name": "Tân Thạnh",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 117,
+    "name": "Tân Trụ",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 118,
+    "name": "Thạnh Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 119,
+    "name": "Thủ Thừa",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 120,
+    "name": "Vĩnh Hưng",
+    "prefix": "Huyện",
+    "province": { "id": 8, "name": "Long An", "code": "LA" }
+  },
+  {
+    "id": 121,
+    "name": "Bắc Trà My",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 122,
+    "name": "Đại Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 123,
+    "name": "Điện Bàn",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 124,
+    "name": "Đông Giang",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 125,
+    "name": "Duy Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 126,
+    "name": "Hiệp Đức",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 127,
+    "name": "Hội An",
+    "prefix": "Thành phố",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 128,
+    "name": "Nam Giang",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 129,
+    "name": "Nam Trà My",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 130,
+    "name": "Nông Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 131,
+    "name": "Núi Thành",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 132,
+    "name": "Phú Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 133,
+    "name": "Phước Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 134,
+    "name": "Quế Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 135,
+    "name": "Tam Kỳ",
+    "prefix": "Thành phố",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 136,
+    "name": "Tây Giang",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 137,
+    "name": "Thăng Bình",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 138,
+    "name": "Tiên Phước",
+    "prefix": "Huyện",
+    "province": { "id": 9, "name": "Quảng Nam", "code": "QNA" }
+  },
+  {
+    "id": 139,
+    "name": "Bà Rịa",
+    "prefix": "Thị xã",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 140,
+    "name": "Châu Đức",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 141,
+    "name": "Côn Đảo",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 142,
+    "name": "Đất Đỏ",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 143,
+    "name": "Long Điền",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 144,
+    "name": "Tân Thành",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 145,
+    "name": "Vũng Tàu",
+    "prefix": "Thành phố",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 146,
+    "name": "Xuyên Mộc",
+    "prefix": "Huyện",
+    "province": { "id": 10, "name": "Bà Rịa Vũng Tàu", "code": "VT" }
+  },
+  {
+    "id": 147,
+    "name": "Buôn Đôn",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 148,
+    "name": "Buôn Hồ",
+    "prefix": "Thị xã",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 149,
+    "name": "Buôn Ma Thuột",
+    "prefix": "Thành phố",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 150,
+    "name": "Cư Kuin",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 151,
+    "name": "Cư M'gar",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 152,
+    "name": "Ea H'Leo",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 153,
+    "name": "Ea Kar",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 154,
+    "name": "Ea Súp",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 155,
+    "name": "Krông Ana",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 156,
+    "name": "Krông Bông",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 157,
+    "name": "Krông Buk",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 158,
+    "name": "Krông Năng",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 159,
+    "name": "Krông Pắc",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 160,
+    "name": "Lăk",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 161,
+    "name": "M'Đrăk",
+    "prefix": "Huyện",
+    "province": { "id": 11, "name": "Đắk Lắk", "code": "DDL" }
+  },
+  {
+    "id": 162,
+    "name": " Thới Lai",
+    "prefix": "Huyện",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 163,
+    "name": "Bình Thủy",
+    "prefix": "Quận",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 164,
+    "name": "Cái Răng",
+    "prefix": "Quận",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 165,
+    "name": "Cờ Đỏ",
+    "prefix": "Huyện",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 166,
+    "name": "Ninh Kiều",
+    "prefix": "Quận",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 167,
+    "name": "Ô Môn",
+    "prefix": "Quận",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 168,
+    "name": "Phong Điền",
+    "prefix": "Huyện",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 169,
+    "name": "Thốt Nốt",
+    "prefix": "Quận",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 170,
+    "name": "Vĩnh Thạnh",
+    "prefix": "Huyện",
+    "province": { "id": 12, "name": "Cần Thơ", "code": "CT" }
+  },
+  {
+    "id": 171,
+    "name": "Bắc Bình",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 172,
+    "name": "Đảo Phú Quý",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 173,
+    "name": "Đức Linh",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 174,
+    "name": "Hàm Tân",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 175,
+    "name": "Hàm Thuận Bắc",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 176,
+    "name": "Hàm Thuận Nam",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 177,
+    "name": "La Gi",
+    "prefix": "Thị xã",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 178,
+    "name": "Phan Thiết",
+    "prefix": "Thành phố",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 179,
+    "name": "Tánh Linh",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 180,
+    "name": "Tuy Phong",
+    "prefix": "Huyện",
+    "province": { "id": 13, "name": "Bình Thuận  N", "code": "BTH" }
+  },
+  {
+    "id": 181,
+    "name": "Bảo Lâm",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 182,
+    "name": "Bảo Lộc",
+    "prefix": "Thành phố",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 183,
+    "name": "Cát Tiên",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 184,
+    "name": "Đạ Huoai",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 185,
+    "name": "Đà Lạt",
+    "prefix": "Thành phố",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 186,
+    "name": "Đạ Tẻh",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 187,
+    "name": "Đam Rông",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 188,
+    "name": "Di Linh",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 189,
+    "name": "Đơn Dương",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 190,
+    "name": "Đức Trọng",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 191,
+    "name": "Lạc Dương",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 192,
+    "name": "Lâm Hà",
+    "prefix": "Huyện",
+    "province": { "id": 14, "name": "Lâm Đồng", "code": "LDD" }
+  },
+  {
+    "id": 193,
+    "name": "A Lưới",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 194,
+    "name": "Huế",
+    "prefix": "Thành phố",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 195,
+    "name": "Hương Thủy",
+    "prefix": "Thị xã",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 196,
+    "name": "Hương Trà",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 197,
+    "name": "Nam Đông",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 198,
+    "name": "Phong Điền",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 199,
+    "name": "Phú Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 200,
+    "name": "Phú Vang",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 201,
+    "name": "Quảng Điền",
+    "prefix": "Huyện",
+    "province": { "id": 15, "name": "Thừa Thiên Huế", "code": "TTH" }
+  },
+  {
+    "id": 202,
+    "name": "An Biên",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 203,
+    "name": "An Minh",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 204,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 205,
+    "name": "Giang Thành",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 206,
+    "name": "Giồng Riềng",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 207,
+    "name": "Gò Quao",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 208,
+    "name": "Hà Tiên",
+    "prefix": "Thị xã",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 209,
+    "name": "Hòn Đất",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 210,
+    "name": "Kiên Hải",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 211,
+    "name": "Kiên Lương",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 212,
+    "name": "Phú Quốc",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 213,
+    "name": "Rạch Giá",
+    "prefix": "Thành phố",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 214,
+    "name": "Tân Hiệp",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 215,
+    "name": "U minh Thượng",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 216,
+    "name": "Vĩnh Thuận",
+    "prefix": "Huyện",
+    "province": { "id": 16, "name": "Kiên Giang", "code": "KG" }
+  },
+  {
+    "id": 217,
+    "name": "Bắc Ninh",
+    "prefix": "Thành phố",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 218,
+    "name": "Gia Bình",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 219,
+    "name": "Lương Tài",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 220,
+    "name": "Quế Võ",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 221,
+    "name": "Thuận Thành",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 222,
+    "name": "Tiên Du",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 223,
+    "name": "Từ Sơn",
+    "prefix": "Thị xã",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 224,
+    "name": "Yên Phong",
+    "prefix": "Huyện",
+    "province": { "id": 17, "name": "Bắc Ninh", "code": "BN" }
+  },
+  {
+    "id": 225,
+    "name": "Ba Chẽ",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 226,
+    "name": "Bình Liêu",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 227,
+    "name": "Cẩm Phả",
+    "prefix": "Thành phố",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 228,
+    "name": "Cô Tô",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 229,
+    "name": "Đầm Hà",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 230,
+    "name": "Đông Triều",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 231,
+    "name": "Hạ Long",
+    "prefix": "Thành phố",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 232,
+    "name": "Hải Hà",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 233,
+    "name": "Hoành Bồ",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 234,
+    "name": "Móng Cái",
+    "prefix": "Thành phố",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 235,
+    "name": "Quảng Yên",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 236,
+    "name": "Tiên Yên",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 237,
+    "name": "Uông Bí",
+    "prefix": "Thị xã",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 238,
+    "name": "Vân Đồn",
+    "prefix": "Huyện",
+    "province": { "id": 18, "name": "Quảng Ninh", "code": "QNI" }
+  },
+  {
+    "id": 239,
+    "name": "Bá Thước",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 240,
+    "name": "Bỉm Sơn",
+    "prefix": "Thị xã",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 241,
+    "name": "Cẩm Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 242,
+    "name": "Đông Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 243,
+    "name": "Hà Trung",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 244,
+    "name": "Hậu Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 245,
+    "name": "Hoằng Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 246,
+    "name": "Lang Chánh",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 247,
+    "name": "Mường Lát",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 248,
+    "name": "Nga Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 249,
+    "name": "Ngọc Lặc",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 250,
+    "name": "Như Thanh",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 251,
+    "name": "Như Xuân",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 252,
+    "name": "Nông Cống",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 253,
+    "name": "Quan Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 254,
+    "name": "Quan Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 255,
+    "name": "Quảng Xương",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 256,
+    "name": "Sầm Sơn",
+    "prefix": "Thị xã",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 257,
+    "name": "Thạch Thành",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 258,
+    "name": "Thanh Hóa",
+    "prefix": "Thành phố",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 259,
+    "name": "Thiệu Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 260,
+    "name": "Thọ Xuân",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 261,
+    "name": "Thường Xuân",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 262,
+    "name": "Tĩnh Gia",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 263,
+    "name": "Triệu Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 264,
+    "name": "Vĩnh Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 265,
+    "name": "Yên Định",
+    "prefix": "Huyện",
+    "province": { "id": 19, "name": "Thanh Hóa", "code": "TH" }
+  },
+  {
+    "id": 266,
+    "name": "Anh Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 267,
+    "name": "Con Cuông",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 268,
+    "name": "Cửa Lò",
+    "prefix": "Thị xã",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 269,
+    "name": "Diễn Châu",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 270,
+    "name": "Đô Lương",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 271,
+    "name": "Hoàng Mai",
+    "prefix": "Thị xã",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 272,
+    "name": "Hưng Nguyên",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 273,
+    "name": "Kỳ Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 274,
+    "name": "Nam Đàn",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 275,
+    "name": "Nghi Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 276,
+    "name": "Nghĩa Đàn",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 277,
+    "name": "Quế Phong",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 278,
+    "name": "Quỳ Châu",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 279,
+    "name": "Quỳ Hợp",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 280,
+    "name": "Quỳnh Lưu",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 281,
+    "name": "Tân Kỳ",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 282,
+    "name": "Thái Hòa",
+    "prefix": "Thị xã",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 283,
+    "name": "Thanh Chương",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 284,
+    "name": "Tương Dương",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 285,
+    "name": "Vinh",
+    "prefix": "Thành phố",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 286,
+    "name": "Yên Thành",
+    "prefix": "Huyện",
+    "province": { "id": 20, "name": "Nghệ An", "code": "NA" }
+  },
+  {
+    "id": 287,
+    "name": "Bình Giang",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 288,
+    "name": "Cẩm Giàng",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 289,
+    "name": "Chí Linh",
+    "prefix": "Thị xã",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 290,
+    "name": "Gia Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 291,
+    "name": "Hải Dương",
+    "prefix": "Thành phố",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 292,
+    "name": "Kim Thành",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 293,
+    "name": "Kinh Môn",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 294,
+    "name": "Nam Sách",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 295,
+    "name": "Ninh Giang",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 296,
+    "name": "Thanh Hà",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 297,
+    "name": "Thanh Miện",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 298,
+    "name": "Tứ Kỳ",
+    "prefix": "Huyện",
+    "province": { "id": 21, "name": "Hải Dương", "code": "HD" }
+  },
+  {
+    "id": 299,
+    "name": "An Khê",
+    "prefix": "Thị xã",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 300,
+    "name": "AYun Pa",
+    "prefix": "Thị xã",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 301,
+    "name": "Chư Păh",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 302,
+    "name": "Chư Pưh",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 303,
+    "name": "Chư Sê",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 304,
+    "name": "ChưPRông",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 305,
+    "name": "Đăk Đoa",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 306,
+    "name": "Đăk Pơ",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 307,
+    "name": "Đức Cơ",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 308,
+    "name": "Ia Grai",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 309,
+    "name": "Ia Pa",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 310,
+    "name": "KBang",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 311,
+    "name": "Kông Chro",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 312,
+    "name": "Krông Pa",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 313,
+    "name": "Mang Yang",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 314,
+    "name": "Phú Thiện",
+    "prefix": "Huyện",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 315,
+    "name": "Plei Ku",
+    "prefix": "Thành phố",
+    "province": { "id": 22, "name": "Gia Lai", "code": "GL" }
+  },
+  {
+    "id": 316,
+    "name": "Bình Long",
+    "prefix": "Thị xã",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 317,
+    "name": "Bù Đăng",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 318,
+    "name": "Bù Đốp",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 319,
+    "name": "Bù Gia Mập",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 320,
+    "name": "Chơn Thành",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 321,
+    "name": "Đồng Phú",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 322,
+    "name": "Đồng Xoài",
+    "prefix": "Thị xã",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 323,
+    "name": "Hớn Quản",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 324,
+    "name": "Lộc Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 325,
+    "name": "Phú Riềng",
+    "prefix": "Huyện",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 326,
+    "name": "Phước Long",
+    "prefix": "Thị xã",
+    "province": { "id": 23, "name": "Bình Phước", "code": "BP" }
+  },
+  {
+    "id": 327,
+    "name": "Ân Thi",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 328,
+    "name": "Hưng Yên",
+    "prefix": "Thành phố",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 329,
+    "name": "Khoái Châu",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 330,
+    "name": "Kim Động",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 331,
+    "name": "Mỹ Hào",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 332,
+    "name": "Phù Cừ",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 333,
+    "name": "Tiên Lữ",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 334,
+    "name": "Văn Giang",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 335,
+    "name": "Văn Lâm",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 336,
+    "name": "Yên Mỹ",
+    "prefix": "Huyện",
+    "province": { "id": 24, "name": "Hưng Yên", "code": "HY" }
+  },
+  {
+    "id": 337,
+    "name": "An Lão",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 338,
+    "name": "An Nhơn",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 339,
+    "name": "Hoài Ân",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 340,
+    "name": "Hoài Nhơn",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 341,
+    "name": "Phù Cát",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 342,
+    "name": "Phù Mỹ",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 343,
+    "name": "Quy Nhơn",
+    "prefix": "Thành phố",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 344,
+    "name": "Tây Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 345,
+    "name": "Tuy Phước",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 346,
+    "name": "Vân Canh",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 347,
+    "name": "Vĩnh Thạnh",
+    "prefix": "Huyện",
+    "province": { "id": 25, "name": "Bình Định", "code": "BDD" }
+  },
+  {
+    "id": 348,
+    "name": "Cái Bè",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 349,
+    "name": "Cai Lậy",
+    "prefix": "Thị xã",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 350,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 351,
+    "name": "Chợ Gạo",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 352,
+    "name": "Gò Công",
+    "prefix": "Thị xã",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 353,
+    "name": "Gò Công Đông",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 354,
+    "name": "Gò Công Tây",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 355,
+    "name": "Huyện Cai Lậy",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 356,
+    "name": "Mỹ Tho",
+    "prefix": "Thành phố",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 357,
+    "name": "Tân Phú Đông",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 358,
+    "name": "Tân Phước",
+    "prefix": "Huyện",
+    "province": { "id": 26, "name": "Tiền Giang", "code": "TG" }
+  },
+  {
+    "id": 359,
+    "name": "Đông Hưng",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 360,
+    "name": "Hưng Hà",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 361,
+    "name": "Kiến Xương",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 362,
+    "name": "Quỳnh Phụ",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 363,
+    "name": "Thái Bình",
+    "prefix": "Thành phố",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 364,
+    "name": "Thái Thuỵ",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 365,
+    "name": "Tiền Hải",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 366,
+    "name": "Vũ Thư",
+    "prefix": "Huyện",
+    "province": { "id": 27, "name": "Thái Bình", "code": "TB" }
+  },
+  {
+    "id": 367,
+    "name": "Bắc Giang",
+    "prefix": "Thành phố",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 368,
+    "name": "Hiệp Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 369,
+    "name": "Lạng Giang",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 370,
+    "name": "Lục Nam",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 371,
+    "name": "Lục Ngạn",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 372,
+    "name": "Sơn Động",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 373,
+    "name": "Tân Yên",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 374,
+    "name": "Việt Yên",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 375,
+    "name": "Yên Dũng",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 376,
+    "name": "Yên Thế",
+    "prefix": "Huyện",
+    "province": { "id": 28, "name": "Bắc Giang", "code": "BG" }
+  },
+  {
+    "id": 377,
+    "name": "Cao Phong",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 378,
+    "name": "Đà Bắc",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 379,
+    "name": "Hòa Bình",
+    "prefix": "Thành phố",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 380,
+    "name": "Kim Bôi",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 381,
+    "name": "Kỳ Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 382,
+    "name": "Lạc Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 383,
+    "name": "Lạc Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 384,
+    "name": "Lương Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 385,
+    "name": "Mai Châu",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 386,
+    "name": "Tân Lạc",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 387,
+    "name": "Yên Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 29, "name": "Hòa Bình", "code": "HB" }
+  },
+  {
+    "id": 388,
+    "name": "An Phú",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 389,
+    "name": "Châu Đốc",
+    "prefix": "Thị xã",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 390,
+    "name": "Châu Phú",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 391,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 392,
+    "name": "Chợ Mới",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 393,
+    "name": "Long Xuyên",
+    "prefix": "Thành phố",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 394,
+    "name": "Phú Tân",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 395,
+    "name": "Tân Châu",
+    "prefix": "Thị xã",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 396,
+    "name": "Thoại Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 397,
+    "name": "Tịnh Biên",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 398,
+    "name": "Tri Tôn",
+    "prefix": "Huyện",
+    "province": { "id": 30, "name": "An Giang", "code": "AG" }
+  },
+  {
+    "id": 399,
+    "name": "Bình Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 400,
+    "name": "Lập Thạch",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 401,
+    "name": "Phúc Yên",
+    "prefix": "Thị xã",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 402,
+    "name": "Sông Lô",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 403,
+    "name": "Tam Đảo",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 404,
+    "name": "Tam Dương",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 405,
+    "name": "Vĩnh Tường",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 406,
+    "name": "Vĩnh Yên",
+    "prefix": "Thành phố",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 407,
+    "name": "Yên Lạc",
+    "prefix": "Huyện",
+    "province": { "id": 31, "name": "Vĩnh Phúc", "code": "VP" }
+  },
+  {
+    "id": 408,
+    "name": "Bến Cầu",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 409,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 410,
+    "name": "Dương Minh Châu",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 411,
+    "name": "Gò Dầu",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 412,
+    "name": "Hòa Thành",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 413,
+    "name": "Tân Biên",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 414,
+    "name": "Tân Châu",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 415,
+    "name": "Tây Ninh",
+    "prefix": "Thị xã",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 416,
+    "name": "Trảng Bàng",
+    "prefix": "Huyện",
+    "province": { "id": 32, "name": "Tây Ninh", "code": "TNI" }
+  },
+  {
+    "id": 417,
+    "name": "Đại Từ",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 418,
+    "name": "Định Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 419,
+    "name": "Đồng Hỷ",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 420,
+    "name": "Phổ Yên",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 421,
+    "name": "Phú Bình",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 422,
+    "name": "Phú Lương",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 423,
+    "name": "Sông Công",
+    "prefix": "Thị xã",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 424,
+    "name": "Thái Nguyên",
+    "prefix": "Thành phố",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 425,
+    "name": "Võ Nhai",
+    "prefix": "Huyện",
+    "province": { "id": 33, "name": "Thái Nguyên", "code": "TN" }
+  },
+  {
+    "id": 426,
+    "name": "Bắc Hà",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 427,
+    "name": "Bảo Thắng",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 428,
+    "name": "Bảo Yên",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 429,
+    "name": "Bát Xát",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 430,
+    "name": "Lào Cai",
+    "prefix": "Thành phố",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 431,
+    "name": "Mường Khương",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 432,
+    "name": "Sa Pa",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 433,
+    "name": "Văn Bàn",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 434,
+    "name": "Xi Ma Cai",
+    "prefix": "Huyện",
+    "province": { "id": 34, "name": "Lào Cai", "code": "LCA" }
+  },
+  {
+    "id": 435,
+    "name": "Giao Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 436,
+    "name": "Hải Hậu",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 437,
+    "name": "Mỹ Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 438,
+    "name": "Nam Định",
+    "prefix": "Thành phố",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 439,
+    "name": "Nam Trực",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 440,
+    "name": "Nghĩa Hưng",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 441,
+    "name": "Trực Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 442,
+    "name": "Vụ Bản",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 443,
+    "name": "Xuân Trường",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 444,
+    "name": "Ý Yên",
+    "prefix": "Huyện",
+    "province": { "id": 35, "name": "Nam Định", "code": "NDD" }
+  },
+  {
+    "id": 445,
+    "name": "Ba Tơ",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 446,
+    "name": "Bình Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 447,
+    "name": "Đức Phổ",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 448,
+    "name": "Lý Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 449,
+    "name": "Minh Long",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 450,
+    "name": "Mộ Đức",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 451,
+    "name": "Nghĩa Hành",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 452,
+    "name": "Quảng Ngãi",
+    "prefix": "Thành phố",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 453,
+    "name": "Sơn Hà",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 454,
+    "name": "Sơn Tây",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 455,
+    "name": "Sơn Tịnh",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 456,
+    "name": "Tây Trà",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 457,
+    "name": "Trà Bồng",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 458,
+    "name": "Tư Nghĩa",
+    "prefix": "Huyện",
+    "province": { "id": 36, "name": "Quảng Ngãi", "code": "QNG" }
+  },
+  {
+    "id": 459,
+    "name": "Ba Tri",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 460,
+    "name": "Bến Tre",
+    "prefix": "Thành phố",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 461,
+    "name": "Bình Đại",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 462,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 463,
+    "name": "Chợ Lách",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 464,
+    "name": "Giồng Trôm",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 465,
+    "name": "Mỏ Cày Bắc",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 466,
+    "name": "Mỏ Cày Nam",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 467,
+    "name": "Thạnh Phú",
+    "prefix": "Huyện",
+    "province": { "id": 37, "name": "Bến Tre", "code": "BTR" }
+  },
+  {
+    "id": 468,
+    "name": "Cư Jút",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 469,
+    "name": "Dăk GLong",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 470,
+    "name": "Dăk Mil",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 471,
+    "name": "Dăk R'Lấp",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 472,
+    "name": "Dăk Song",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 473,
+    "name": "Gia Nghĩa",
+    "prefix": "Thị xã",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 474,
+    "name": "Krông Nô",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 475,
+    "name": "Tuy Đức",
+    "prefix": "Huyện",
+    "province": { "id": 38, "name": "Đắk Nông", "code": "DNO" }
+  },
+  {
+    "id": 476,
+    "name": "Cà Mau",
+    "prefix": "Thành phố",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 477,
+    "name": "Cái Nước",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 478,
+    "name": "Đầm Dơi",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 479,
+    "name": "Năm Căn",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 480,
+    "name": "Ngọc Hiển",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 481,
+    "name": "Phú Tân",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 482,
+    "name": "Thới Bình",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 483,
+    "name": "Trần Văn Thời",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 484,
+    "name": "U Minh",
+    "prefix": "Huyện",
+    "province": { "id": 39, "name": "Cà Mau", "code": "CM" }
+  },
+  {
+    "id": 485,
+    "name": "Bình Minh",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 486,
+    "name": "Bình Tân",
+    "prefix": "Quận",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 487,
+    "name": "Long Hồ",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 488,
+    "name": "Mang Thít",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 489,
+    "name": "Tam Bình",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 490,
+    "name": "Trà Ôn",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 491,
+    "name": "Vĩnh Long",
+    "prefix": "Thành phố",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 492,
+    "name": "Vũng Liêm",
+    "prefix": "Huyện",
+    "province": { "id": 40, "name": "Vĩnh Long", "code": "VL" }
+  },
+  {
+    "id": 493,
+    "name": "Gia Viễn",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 494,
+    "name": "Hoa Lư",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 495,
+    "name": "Kim Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 496,
+    "name": "Nho Quan",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 497,
+    "name": "Ninh Bình",
+    "prefix": "Thành phố",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 498,
+    "name": "Tam Điệp",
+    "prefix": "Thị xã",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 499,
+    "name": "Yên Khánh",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 500,
+    "name": "Yên Mô",
+    "prefix": "Huyện",
+    "province": { "id": 41, "name": "Ninh Bình", "code": "NB" }
+  },
+  {
+    "id": 501,
+    "name": "Cẩm Khê",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 502,
+    "name": "Đoan Hùng",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 503,
+    "name": "Hạ Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 504,
+    "name": "Lâm Thao",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 505,
+    "name": "Phù Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 506,
+    "name": "Phú Thọ",
+    "prefix": "Thị xã",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 507,
+    "name": "Tam Nông",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 508,
+    "name": "Tân Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 509,
+    "name": "Thanh Ba",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 510,
+    "name": "Thanh Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 511,
+    "name": "Thanh Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 512,
+    "name": "Việt Trì",
+    "prefix": "Thành phố",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 513,
+    "name": "Yên Lập",
+    "prefix": "Huyện",
+    "province": { "id": 42, "name": "Phú Thọ", "code": "PT" }
+  },
+  {
+    "id": 514,
+    "name": "Bác Ái",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 515,
+    "name": "Ninh Hải",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 516,
+    "name": "Ninh Phước",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 517,
+    "name": "Ninh Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 518,
+    "name": "Phan Rang - Tháp Chàm",
+    "prefix": "Thành phố",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 519,
+    "name": "Thuận Bắc",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 520,
+    "name": "Thuận Nam",
+    "prefix": "Huyện",
+    "province": { "id": 43, "name": "Ninh Thuận", "code": "NT" }
+  },
+  {
+    "id": 521,
+    "name": "Đông Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 522,
+    "name": "Đồng Xuân",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 523,
+    "name": "Phú Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 524,
+    "name": "Sơn Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 525,
+    "name": "Sông Cầu",
+    "prefix": "Thị xã",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 526,
+    "name": "Sông Hinh",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 527,
+    "name": "Tây Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 528,
+    "name": "Tuy An",
+    "prefix": "Huyện",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 529,
+    "name": "Tuy Hòa",
+    "prefix": "Thành phố",
+    "province": { "id": 44, "name": "Phú Yên", "code": "PY" }
+  },
+  {
+    "id": 530,
+    "name": "Bình Lục",
+    "prefix": "Huyện",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 531,
+    "name": "Duy Tiên",
+    "prefix": "Huyện",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 532,
+    "name": "Kim Bảng",
+    "prefix": "Huyện",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 533,
+    "name": "Lý Nhân",
+    "prefix": "Huyện",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 534,
+    "name": "Phủ Lý",
+    "prefix": "Thành phố",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 535,
+    "name": "Thanh Liêm",
+    "prefix": "Huyện",
+    "province": { "id": 45, "name": "Hà Nam", "code": "HNA" }
+  },
+  {
+    "id": 536,
+    "name": "Cẩm Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 537,
+    "name": "Can Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 538,
+    "name": "Đức Thọ",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 539,
+    "name": "Hà Tĩnh",
+    "prefix": "Thành phố",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 540,
+    "name": "Hồng Lĩnh",
+    "prefix": "Thị xã",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 541,
+    "name": "Hương Khê",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 542,
+    "name": "Hương Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 543,
+    "name": "Kỳ Anh",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 544,
+    "name": "Lộc Hà",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 545,
+    "name": "Nghi Xuân",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 546,
+    "name": "Thạch Hà",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 547,
+    "name": "Vũ Quang",
+    "prefix": "Huyện",
+    "province": { "id": 46, "name": "Hà Tĩnh", "code": "HT" }
+  },
+  {
+    "id": 548,
+    "name": "Cao Lãnh",
+    "prefix": "Thành phố",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 549,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 550,
+    "name": "Hồng Ngự",
+    "prefix": "Thị xã",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 551,
+    "name": "Huyện Cao Lãnh",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 552,
+    "name": "Huyện Hồng Ngự",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 553,
+    "name": "Lai Vung",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 554,
+    "name": "Lấp Vò",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 555,
+    "name": "Sa Đéc",
+    "prefix": "Thị xã",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 556,
+    "name": "Tam Nông",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 557,
+    "name": "Tân Hồng",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 558,
+    "name": "Thanh Bình",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 559,
+    "name": "Tháp Mười",
+    "prefix": "Huyện",
+    "province": { "id": 47, "name": "Đồng Tháp", "code": "DDT" }
+  },
+  {
+    "id": 560,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 561,
+    "name": "Cù Lao Dung",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 562,
+    "name": "Kế Sách",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 563,
+    "name": "Long Phú",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 564,
+    "name": "Mỹ Tú",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 565,
+    "name": "Mỹ Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 566,
+    "name": "Ngã Năm",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 567,
+    "name": "Sóc Trăng",
+    "prefix": "Thành phố",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 568,
+    "name": "Thạnh Trị",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 569,
+    "name": "Trần Đề",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 570,
+    "name": "Vĩnh Châu",
+    "prefix": "Huyện",
+    "province": { "id": 48, "name": "Sóc Trăng", "code": "ST" }
+  },
+  {
+    "id": 571,
+    "name": "Đăk Glei",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 572,
+    "name": "Đăk Hà",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 573,
+    "name": "Đăk Tô",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 574,
+    "name": "Ia H'Drai",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 575,
+    "name": "Kon Plông",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 576,
+    "name": "Kon Rẫy",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 577,
+    "name": "KonTum",
+    "prefix": "Thành phố",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 578,
+    "name": "Ngọc Hồi",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 579,
+    "name": "Sa Thầy",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 580,
+    "name": "Tu Mơ Rông",
+    "prefix": "Huyện",
+    "province": { "id": 49, "name": "Kon Tum", "code": "KT" }
+  },
+  {
+    "id": 581,
+    "name": "Ba Đồn",
+    "prefix": "Thị xã",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 582,
+    "name": "Bố Trạch",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 583,
+    "name": "Đồng Hới",
+    "prefix": "Thành phố",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 584,
+    "name": "Lệ Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 585,
+    "name": "Minh Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 586,
+    "name": "Quảng Ninh",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 587,
+    "name": "Quảng Trạch",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 588,
+    "name": "Tuyên Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 50, "name": "Quảng Bình", "code": "QB" }
+  },
+  {
+    "id": 589,
+    "name": "Cam Lộ",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 590,
+    "name": "Đa Krông",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 591,
+    "name": "Đảo Cồn cỏ",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 592,
+    "name": "Đông Hà",
+    "prefix": "Thành phố",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 593,
+    "name": "Gio Linh",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 594,
+    "name": "Hải Lăng",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 595,
+    "name": "Hướng Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 596,
+    "name": "Quảng Trị",
+    "prefix": "Thị xã",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 597,
+    "name": "Triệu Phong",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 598,
+    "name": "Vĩnh Linh",
+    "prefix": "Huyện",
+    "province": { "id": 51, "name": "Quảng Trị", "code": "QT" }
+  },
+  {
+    "id": 599,
+    "name": "Càng Long",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 600,
+    "name": "Cầu Kè",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 601,
+    "name": "Cầu Ngang",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 602,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 603,
+    "name": "Duyên Hải",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 604,
+    "name": "Tiểu Cần",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 605,
+    "name": "Trà Cú",
+    "prefix": "Huyện",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 606,
+    "name": "Trà Vinh",
+    "prefix": "Thành phố",
+    "province": { "id": 52, "name": "Trà Vinh", "code": "TV" }
+  },
+  {
+    "id": 607,
+    "name": "Châu Thành",
+    "prefix": "Huyện",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 608,
+    "name": "Châu Thành A",
+    "prefix": "Huyện",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 609,
+    "name": "Long Mỹ",
+    "prefix": "Huyện",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 610,
+    "name": "Ngã Bảy",
+    "prefix": "Thị xã",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 611,
+    "name": "Phụng Hiệp",
+    "prefix": "Huyện",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 612,
+    "name": "Vị Thanh",
+    "prefix": "Thành phố",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 613,
+    "name": "Vị Thủy",
+    "prefix": "Huyện",
+    "province": { "id": 53, "name": "Hậu Giang", "code": "HGI" }
+  },
+  {
+    "id": 614,
+    "name": "Bắc Yên",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 615,
+    "name": "Mai Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 616,
+    "name": "Mộc Châu",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 617,
+    "name": "Mường La",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 618,
+    "name": "Phù Yên",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 619,
+    "name": "Quỳnh Nhai",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 620,
+    "name": "Sơn La",
+    "prefix": "Thành phố",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 621,
+    "name": "Sông Mã",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 622,
+    "name": "Sốp Cộp",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 623,
+    "name": "Thuận Châu",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 624,
+    "name": "Vân Hồ",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 625,
+    "name": "Yên Châu",
+    "prefix": "Huyện",
+    "province": { "id": 54, "name": "Sơn La", "code": "SL" }
+  },
+  {
+    "id": 626,
+    "name": "Bạc Liêu",
+    "prefix": "Thành phố",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 627,
+    "name": "Đông Hải",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 628,
+    "name": "Giá Rai",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 629,
+    "name": "Hòa Bình",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 630,
+    "name": "Hồng Dân",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 631,
+    "name": "Phước Long",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 632,
+    "name": "Vĩnh Lợi",
+    "prefix": "Huyện",
+    "province": { "id": 55, "name": "Bạc Liêu", "code": "BL" }
+  },
+  {
+    "id": 633,
+    "name": "Lục Yên",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 634,
+    "name": "Mù Cang Chải",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 635,
+    "name": "Nghĩa Lộ",
+    "prefix": "Thị xã",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 636,
+    "name": "Trạm Tấu",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 637,
+    "name": "Trấn Yên",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 638,
+    "name": "Văn Chấn",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 639,
+    "name": "Văn Yên",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 640,
+    "name": "Yên Bái",
+    "prefix": "Thành phố",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 641,
+    "name": "Yên Bình",
+    "prefix": "Huyện",
+    "province": { "id": 56, "name": "Yên Bái", "code": "YB" }
+  },
+  {
+    "id": 642,
+    "name": "Chiêm Hóa",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 643,
+    "name": "Hàm Yên",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 644,
+    "name": "Lâm Bình",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 645,
+    "name": "Na Hang",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 646,
+    "name": "Sơn Dương",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 647,
+    "name": "Tuyên Quang",
+    "prefix": "Thành phố",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 648,
+    "name": "Yên Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 57, "name": "Tuyên Quang", "code": "TQ" }
+  },
+  {
+    "id": 649,
+    "name": "Điện Biên",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 650,
+    "name": "Điện Biên Đông",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 651,
+    "name": "Điện Biên Phủ",
+    "prefix": "Thành phố",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 652,
+    "name": "Mường Ảng",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 653,
+    "name": "Mường Chà",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 654,
+    "name": "Mường Lay",
+    "prefix": "Thị xã",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 655,
+    "name": "Mường Nhé",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 656,
+    "name": "Nậm Pồ",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 657,
+    "name": "Tủa Chùa",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 658,
+    "name": "Tuần Giáo",
+    "prefix": "Huyện",
+    "province": { "id": 58, "name": "Điện Biên", "code": "DDB" }
+  },
+  {
+    "id": 659,
+    "name": "Lai Châu",
+    "prefix": "Thị xã",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 660,
+    "name": "Mường Tè",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 661,
+    "name": "Nậm Nhùn",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 662,
+    "name": "Phong Thổ",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 663,
+    "name": "Sìn Hồ",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 664,
+    "name": "Tam Đường",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 665,
+    "name": "Tân Uyên",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 666,
+    "name": "Than Uyên",
+    "prefix": "Huyện",
+    "province": { "id": 59, "name": "Lai Châu", "code": "LCH" }
+  },
+  {
+    "id": 667,
+    "name": "Bắc Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 668,
+    "name": "Bình Gia",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 669,
+    "name": "Cao Lộc",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 670,
+    "name": "Chi Lăng",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 671,
+    "name": "Đình Lập",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 672,
+    "name": "Hữu Lũng",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 673,
+    "name": "Lạng Sơn",
+    "prefix": "Thành phố",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 674,
+    "name": "Lộc Bình",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 675,
+    "name": "Tràng Định",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 676,
+    "name": "Văn Lãng",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 677,
+    "name": "Văn Quan",
+    "prefix": "Huyện",
+    "province": { "id": 60, "name": "Lạng Sơn", "code": "LS" }
+  },
+  {
+    "id": 678,
+    "name": "Bắc Mê",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 679,
+    "name": "Bắc Quang",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 680,
+    "name": "Đồng Văn",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 681,
+    "name": "Hà Giang",
+    "prefix": "Thành phố",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 682,
+    "name": "Hoàng Su Phì",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 683,
+    "name": "Mèo Vạc",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 684,
+    "name": "Quản Bạ",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 685,
+    "name": "Quang Bình",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 686,
+    "name": "Vị Xuyên",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 687,
+    "name": "Xín Mần",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 688,
+    "name": "Yên Minh",
+    "prefix": "Huyện",
+    "province": { "id": 61, "name": "Hà Giang", "code": "HG" }
+  },
+  {
+    "id": 689,
+    "name": "Ba Bể",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 690,
+    "name": "Bắc Kạn",
+    "prefix": "Thị xã",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 691,
+    "name": "Bạch Thông",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 692,
+    "name": "Chợ Đồn",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 693,
+    "name": "Chợ Mới",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 694,
+    "name": "Na Rì",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 695,
+    "name": "Ngân Sơn",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 696,
+    "name": "Pác Nặm",
+    "prefix": "Huyện",
+    "province": { "id": 62, "name": "Bắc Kạn", "code": "BK" }
+  },
+  {
+    "id": 697,
+    "name": "Bảo Lạc",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 698,
+    "name": "Bảo Lâm",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 699,
+    "name": "Cao Bằng",
+    "prefix": "Thị xã",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 700,
+    "name": "Hạ Lang",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 701,
+    "name": "Hà Quảng",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 702,
+    "name": "Hòa An",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 703,
+    "name": "Nguyên Bình",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 704,
+    "name": "Phục Hòa",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 705,
+    "name": "Quảng Uyên",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 706,
+    "name": "Thạch An",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 707,
+    "name": "Thông Nông",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 708,
+    "name": "Trà Lĩnh",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  },
+  {
+    "id": 709,
+    "name": "Trùng Khánh",
+    "prefix": "Huyện",
+    "province": { "id": 63, "name": "Cao Bằng", "code": "CB" }
+  }
+]

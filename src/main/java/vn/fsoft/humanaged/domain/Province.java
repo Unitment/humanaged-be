@@ -15,7 +15,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Getter
@@ -33,7 +32,7 @@ public class Province {
     private String code;
 
     @OneToMany(mappedBy = "province", cascade = CascadeType.ALL)
-    // @JsonIgnore
+    @JsonIgnore
     private Set<District> districts;
 
     @OneToMany(mappedBy = "province", cascade = CascadeType.ALL)
