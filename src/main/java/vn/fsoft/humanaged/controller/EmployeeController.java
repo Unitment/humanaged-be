@@ -6,13 +6,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-import vn.fsoft.humanaged.domain.Account;
-import vn.fsoft.humanaged.domain.Employee;
-import vn.fsoft.humanaged.domain.Status;
-import vn.fsoft.humanaged.domain.SystemRole;
+import vn.fsoft.humanaged.domain.*;
 import vn.fsoft.humanaged.dto.*;
 import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.service.IEmployeeService;
+import vn.fsoft.humanaged.service.ILocationService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +28,9 @@ public class EmployeeController {
 
     @Autowired
     private PasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
+    private ILocationService locationService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -171,5 +172,20 @@ public class EmployeeController {
         if (deletedEmployee != null) employeeDTO = modelMapper.map(deletedEmployee, EmployeeDTO.class);
 
         return ResponseEntity.ok(employeeDTO);
+    }
+
+    @GetMapping("/provinces")
+    public ResponseEntity<List<Province>> getAllProvince() {
+        return ResponseEntity.ok(locationService.getAllProvince());
+    }
+
+    @GetMapping("/provinces/{id}/districts")
+    public ResponseEntity<List<District>> getAllDistrictByProvince(@PathVariable int id) {
+        return ResponseEntity.ok(locationService.getAllDistrictByProvinceId(id));
+    }
+
+    @GetMapping("/districts/{id}/wards")
+    public ResponseEntity<List<Ward>> getAllWardByDistrict(@PathVariable int id) {
+        return ResponseEntity.ok(locationService.getAllWardByDistrictId(id));
     }
 }
