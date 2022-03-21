@@ -163,11 +163,14 @@ public class EmployeeController {
             Employee employee = oEmployee.get();
             EmployeeDetailDTO employeeDetailDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
             employeeDetailDTO.setProjectMembers(
-                    employee.getProjectMembers().stream().map(pm -> {
-                        ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
-                        pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
-                        return pmd;
-                    }).collect(Collectors.toSet())
+                    employee.getProjectMembers()
+                        .stream()
+                        .filter(pm -> !pm.getProject().isDelete())
+                        .map(pm -> {
+                            ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
+                            pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
+                            return pmd;
+                        }).collect(Collectors.toSet())
             );
             return new ResponseEntity<>(employeeDetailDTO, HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
