@@ -9,4 +9,6 @@ import vn.fsoft.humanaged.domain.ProjectState;
 public interface IProjectRepository extends JpaRepository<Project, String> {
 
     List<Project> findAllByState(ProjectState state);
+
+    List<Project> findAllByIsDeleteFalse();
 }

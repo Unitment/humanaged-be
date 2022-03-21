@@ -15,4 +15,8 @@ public interface IProjectService extends IService<Project, String> {
     ProjectDTO updateProject(ProjectDTO projectDTO);
 
     ProjectDTO saveDTO(ProjectDTO entity);
+
+    Project updateProjectIsDelete(String id, boolean isDelete);
+
+    List<Project> getAllByIsDeleteFalse();
 }

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Project;
 import vn.fsoft.humanaged.dto.EmployeeDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
@@ -24,9 +25,11 @@ public class ProjectController {
     @Autowired
     private ModelMapper modelMapper;
 
+
+
     @GetMapping("/all")
-    public ResponseEntity<List<ProjectDTO>> getAllProjects() {
-        List<Project> projects = projectService.getAll();
+    public ResponseEntity<List<ProjectDTO>> getAllProjectsByDeleteFalse() {
+        List<Project> projects = projectService.getAllByIsDeleteFalse();
         List<ProjectDTO> subProjects = projects.stream()
                 .map(project -> modelMapper.map(project, ProjectDTO.class))
                 .collect(Collectors.toList());
@@ -51,7 +54,7 @@ public class ProjectController {
 
     @GetMapping("/detail/{id}")
     @ResponseBody
-    public ResponseEntity<ProjectDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
+    public ResponseEntity<ProjectDetailDTO> getProjectDetailByID(@PathVariable("id") String id) {
         Optional<Project> oProject = projectService.getById(id);
 
         if (oProject.isPresent()) {
@@ -92,7 +95,10 @@ public class ProjectController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public void deleteById(@PathVariable("id") String id) {
-        projectService.deleteById(id);
+    public ResponseEntity<ProjectDTO> deleteById(@PathVariable("id") String id) {
+        Project deletedProject = this.projectService.updateProjectIsDelete(id, true);
+        ProjectDTO projectDTO = null;
+        if (deletedProject!=null) projectDTO = modelMapper.map(deletedProject,ProjectDTO.class);
+        return ResponseEntity.ok(projectDTO);
     }
 }

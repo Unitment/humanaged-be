@@ -22,6 +22,7 @@ public class ProjectDTO {
     private LocalDate endDate;
     private String description;
     private ProjectState state; // enum
+    private boolean isDelete;
     private List<EmployeeInProjectDTO> EmployeeInProjectList;
     private Set<ProjectMember> projectMembers;
 }

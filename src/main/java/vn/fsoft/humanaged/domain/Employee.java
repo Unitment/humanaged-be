@@ -12,6 +12,7 @@ import org.hibernate.annotations.Parameter;
 import javax.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -64,6 +65,8 @@ public class Employee {
 
     @Column(nullable = false, columnDefinition = "bit default 0")
     private boolean isDelete;
+    
+    private LocalDateTime modifiedDate;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "accountName")

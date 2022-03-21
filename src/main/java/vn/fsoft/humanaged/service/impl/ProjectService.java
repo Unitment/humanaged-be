@@ -7,13 +7,12 @@ import vn.fsoft.humanaged.domain.*;
 import vn.fsoft.humanaged.dto.EmployeeInProjectDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
+import vn.fsoft.humanaged.repository.IProjectMemberRepository;
 import vn.fsoft.humanaged.repository.IProjectRepository;
+import vn.fsoft.humanaged.service.IProjectMemberService;
 import vn.fsoft.humanaged.service.IProjectService;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class ProjectService implements IProjectService {
@@ -23,6 +22,9 @@ public class ProjectService implements IProjectService {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
+
+    @Autowired
+    private ProjectMemberService projectMemberService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -44,17 +46,17 @@ public class ProjectService implements IProjectService {
 
     @Override
     public void deleteById(String key) {
-        Project project = projectRepository.findById(key)
-                .orElseThrow(() -> new RuntimeException("Project not found"));
-        projectRepository.deleteById(key);
-        project.getProjectMembers().stream().forEach(projectMember -> {
-            if (projectMember.getEmployee().getProjectMembers().isEmpty()
-                    || projectMember.getEmployee().getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
-                            .getState().equals(ProjectState.CLOSED))) {
-                projectMember.getEmployee().setStatus(Status.SUPPORT);
-                employeeRepository.save(projectMember.getEmployee());
-            }
-        });
+//        Project project = projectRepository.findById(key)
+//                .orElseThrow(() -> new RuntimeException("Project not found"));
+//        projectRepository.deleteById(key);
+//        project.getProjectMembers().stream().forEach(projectMember -> {
+//            if (projectMember.getEmployee().getProjectMembers().isEmpty()
+//                    || projectMember.getEmployee().getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+//                            .getState().equals(ProjectState.CLOSED))) {
+//                projectMember.getEmployee().setStatus(Status.SUPPORT);
+//                employeeRepository.save(projectMember.getEmployee());
+//            }
+//        });
     }
 
     @Override
@@ -90,6 +92,37 @@ public class ProjectService implements IProjectService {
         entity.setEmployeeInProjectList(employees);
         return entity;
     }
+
+    @Override
+    public Project updateProjectIsDelete(String id, boolean isDelete) {
+        Optional<Project> oProject = this.projectRepository.findById(id);
+
+        if (oProject.isPresent()) {
+            Project project = oProject.get();
+            project.setDelete(isDelete);
+            List<Employee> members = new ArrayList<>();
+            oProject.get().getProjectMembers().stream().forEach(projectMember -> {
+                members.add(projectMember.getEmployee());
+            });
+            members.forEach(employee -> {
+//                System.out.println(employee.getAccount().getAccountName()+": "+projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty());
+//                System.out.println(employee.getAccount().getAccountName()+": "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+//                            .getState().equals(ProjectState.CLOSED))+", "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+//                        .isDelete()));
+//                if (projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty()
+                if (employee.getProjectMembers().stream().allMatch(projectMember -> projectMember.getProject().isDelete()==true)
+                        ||employee.getProjectMembers().isEmpty())
+                    employee.setStatus(Status.SUPPORT);
+            });
+            return this.projectRepository.save(project);
+        } else return null;
+    }
+
+    @Override
+    public List<Project> getAllByIsDeleteFalse() {
+        return projectRepository.findAllByIsDeleteFalse();
+    }
+
 
     @Override
     public ProjectDTO updateProject(ProjectDTO entity) {

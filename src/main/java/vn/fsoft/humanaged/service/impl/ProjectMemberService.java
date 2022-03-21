@@ -49,7 +49,12 @@ public class ProjectMemberService implements IProjectMemberService {
 
     @Override
     public List<ProjectMember> findMemberByRole(ProjectRole role) {
-        return projectMemberRepository.findAllByRole(role);
+        List<ProjectMember> ls =  projectMemberRepository.findAllByRole(role);
+        List<ProjectMember> returnValue = new ArrayList<>();
+        for (int i = 0; i<ls.size();i++){
+            if (ls.get(i).getProject().isDelete()==false) returnValue.add(ls.get(i));
+        }
+        return returnValue;
     }
 
     @Override
@@ -102,6 +107,7 @@ public class ProjectMemberService implements IProjectMemberService {
         List<ProjectMember> temp1 = findMemberByEmployeeId(employeeId);
         List<ProjectAndMember> temp2 = new ArrayList<>();
         for (ProjectMember projectMember : temp1) {
+            if (projectMember.getProject().isDelete()==false)
             temp2.add(new ProjectAndMember(projectMember.getProject(), findMemberByProjectId(projectMember.getId().getProjectID())));
         }
 
