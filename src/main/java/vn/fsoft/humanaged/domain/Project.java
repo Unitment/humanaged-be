@@ -14,6 +14,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -40,6 +41,8 @@ public class Project {
 
     private LocalDate endDate;
 
+    private LocalDateTime modifiedDate;
+
     @Nationalized
     private String description;
 
@@ -49,4 +52,7 @@ public class Project {
     @JsonIgnore
     @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private Set<ProjectMember> projectMembers;
+
+    @Column(nullable = false, columnDefinition = "bit default 0")
+    private boolean isDelete;
 }
