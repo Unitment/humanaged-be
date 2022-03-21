@@ -2,9 +2,13 @@ package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Status;
+import vn.fsoft.humanaged.repository.IDistrictRepository;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
+import vn.fsoft.humanaged.repository.IProvinceRepository;
+import vn.fsoft.humanaged.repository.IWardRepository;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
 import java.util.List;
@@ -15,6 +19,15 @@ public class EmployeeService implements IEmployeeService {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
+
+    @Autowired
+    IProvinceRepository provinceRepository ;
+
+    @Autowired
+    IDistrictRepository districtRepository;
+
+    @Autowired
+    IWardRepository wardRepository;
 
     @Override
     public List<Employee> getAll() {
@@ -60,5 +73,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public Optional<Employee> findByAccountName(String accountName) {
         return this.employeeRepository.findByAccountName(accountName);
+    }
+
+    @Override
+    public List<Employee> findEmployeeExceptDeleted() {
+        return employeeRepository.findAllByIsDeleteFalse();
     }
 }

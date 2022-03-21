@@ -27,4 +27,6 @@ public interface IEmployeeRepository extends JpaRepository<Employee, String> {
             "                         FROM employee AS e INNER JOIN project_member pm ON e.id = pm.employee_id\n" +
             "                         WHERE pm.project_id = :projectID)", nativeQuery = true)
     List<Employee> findAllExceptProject(String projectID);
+
+    List<Employee> findAllByIsDeleteFalse();
 }

@@ -16,4 +16,6 @@ public interface IEmployeeService extends IService<Employee, String> {
     Employee updateEmployeeIsDelete(String id, boolean isDelete);
 
     Optional<Employee> findByAccountName(String accountName);
+
+    List<Employee> findEmployeeExceptDeleted();
 }

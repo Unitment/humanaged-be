@@ -84,7 +84,7 @@ public class EmployeeController {
         return ResponseEntity.ok(existAccountNameList);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<EmployeeDTO>> getAllEmployee(@RequestParam(required = false) String projectID) {
         List<Employee> employeeList;
         if (projectID == null) {
@@ -92,6 +92,15 @@ public class EmployeeController {
         } else {
             employeeList = employeeService.findAllExceptProject(projectID);
         }
+
+        return ResponseEntity.ok(employeeList.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList()));
+    }
+
+    @GetMapping()
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployee() {
+        List<Employee> employeeList = employeeService.findEmployeeExceptDeleted();
 
         return ResponseEntity.ok(employeeList.stream()
                 .map(this::convertToDTO)
