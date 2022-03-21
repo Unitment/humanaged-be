@@ -63,9 +63,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/api/login").permitAll()
                 .antMatchers("/api/refreshtoken").permitAll()
                 .antMatchers("/api/home").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, "/api/**").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE,"/api/**").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "api/*/detail/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers("api/employees/provinces").hasRole("ADMIN")
+                .antMatchers("api/employees/provinces/{id}/districts").hasRole("ADMIN")
+                .antMatchers("api/employees/districts/{id}/wards").hasRole("ADMIN")
                 .anyRequest().hasAnyRole("ADMIN", "USER");
     }
 }
