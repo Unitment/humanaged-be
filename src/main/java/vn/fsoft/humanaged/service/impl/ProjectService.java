@@ -10,6 +10,7 @@ import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.repository.IProjectRepository;
 import vn.fsoft.humanaged.service.IProjectService;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -64,14 +65,23 @@ public class ProjectService implements IProjectService {
 
     @Override
     public ProjectDTO saveDTO(ProjectDTO entity) {
-        final Project newProject = projectRepository.save(modelMapper.map(entity, Project.class));
-
         List<EmployeeInProjectDTO> employees = entity.getEmployeeInProjectList();
+        employees.stream().allMatch(employee -> {
+            if (employeeRepository.findByAccountName(employee.getAccountName()).isPresent()) {
+                return true;
+            }
+            throw new RuntimeException(
+                    "Employee " + "[ " + employee.getAccountName() + " ]" + " not found");
+        });
+        final Project newProject = projectRepository.save(modelMapper.map(entity, Project.class));
+        newProject.setCreatedDate(LocalDateTime.now());
+
         Set<ProjectMember> projectMembers = new HashSet<>();
         employees.forEach(employee -> {
             Employee member = employeeRepository.findByAccountName(employee.getAccountName())
                     .orElseThrow(() -> new RuntimeException(
                             "Employee " + "[ " + employee.getAccountName() + " ]" + " not found"));
+
             ProjectMember projectMember = new ProjectMember();
             if (member.getStatus() == null || member.getStatus().equals(Status.SUPPORT)) {
                 member.setStatus(Status.WORKING);

@@ -8,6 +8,7 @@ import vn.fsoft.humanaged.domain.ProjectMember;
 import vn.fsoft.humanaged.domain.ProjectState;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -24,4 +25,5 @@ public class ProjectDTO {
     private ProjectState state; // enum
     private List<EmployeeInProjectDTO> EmployeeInProjectList;
     private Set<ProjectMember> projectMembers;
+    private LocalDateTime createdDate;
 }
