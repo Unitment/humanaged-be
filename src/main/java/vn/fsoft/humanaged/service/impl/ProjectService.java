@@ -100,13 +100,10 @@ public class ProjectService implements IProjectService {
                 members.add(projectMember.getEmployee());
             });
             members.forEach(employee -> {
-//                System.out.println(employee.getAccount().getAccountName()+": "+projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty());
-//                System.out.println(employee.getAccount().getAccountName()+": "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
-//                            .getState().equals(ProjectState.CLOSED))+", "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
-//                        .isDelete()));
-//                if (projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty()
-                if (employee.getProjectMembers().stream().allMatch(projectMember -> projectMember.getProject().isDelete() == true)
-                        || employee.getProjectMembers().isEmpty())
+                if (employee.getProjectMembers().stream().allMatch(projectMember -> projectMember.getProject().isDelete())
+                        || employee.getProjectMembers().isEmpty()
+                        || employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+                            .getState().equals(ProjectState.CLOSED) || arg0.getProject().isDelete()))
                     employee.setStatus(Status.SUPPORT);
             });
             return this.projectRepository.save(project);
