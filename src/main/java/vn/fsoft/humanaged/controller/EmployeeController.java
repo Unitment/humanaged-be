@@ -85,23 +85,15 @@ public class EmployeeController {
         return ResponseEntity.ok(existAccountNameList);
     }
 
-    @GetMapping("/all")
+    @GetMapping("")
     public ResponseEntity<List<EmployeeDTO>> getAllEmployee(@RequestParam(required = false) String projectID) {
         List<Employee> employeeList;
         if (projectID == null) {
-            employeeList = employeeService.getAll();
+            employeeList = employeeService.findEmployeeExceptDeleted();
         } else {
             employeeList = employeeService.findAllExceptProject(projectID);
+            employeeList = employeeList.stream().filter(employee -> !employee.isDelete()).collect(Collectors.toList());
         }
-
-        return ResponseEntity.ok(employeeList.stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList()));
-    }
-
-    @GetMapping()
-    public ResponseEntity<List<EmployeeDTO>> getAllEmployee() {
-        List<Employee> employeeList = employeeService.findEmployeeExceptDeleted();
 
         return ResponseEntity.ok(employeeList.stream()
                 .map(this::convertToDTO)
@@ -164,13 +156,13 @@ public class EmployeeController {
             EmployeeDetailDTO employeeDetailDTO = modelMapper.map(employee, EmployeeDetailDTO.class);
             employeeDetailDTO.setProjectMembers(
                     employee.getProjectMembers()
-                        .stream()
-                        .filter(pm -> !pm.getProject().isDelete())
-                        .map(pm -> {
-                            ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
-                            pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
-                            return pmd;
-                        }).collect(Collectors.toSet())
+                            .stream()
+                            .filter(pm -> !pm.getProject().isDelete())
+                            .map(pm -> {
+                                ProjectMemberProjectsDTO pmd = modelMapper.map(pm, ProjectMemberProjectsDTO.class);
+                                pmd.setProject(modelMapper.map(pm.getProject(), ProjectDTO.class));
+                                return pmd;
+                            }).collect(Collectors.toSet())
             );
             return new ResponseEntity<>(employeeDetailDTO, HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.NOT_FOUND);

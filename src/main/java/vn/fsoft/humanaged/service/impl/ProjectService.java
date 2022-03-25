@@ -7,9 +7,7 @@ import vn.fsoft.humanaged.domain.*;
 import vn.fsoft.humanaged.dto.EmployeeInProjectDTO;
 import vn.fsoft.humanaged.dto.ProjectDTO;
 import vn.fsoft.humanaged.repository.IEmployeeRepository;
-import vn.fsoft.humanaged.repository.IProjectMemberRepository;
 import vn.fsoft.humanaged.repository.IProjectRepository;
-import vn.fsoft.humanaged.service.IProjectMemberService;
 import vn.fsoft.humanaged.service.IProjectService;
 
 import java.util.*;
@@ -22,9 +20,6 @@ public class ProjectService implements IProjectService {
 
     @Autowired
     private IEmployeeRepository employeeRepository;
-
-    @Autowired
-    private ProjectMemberService projectMemberService;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -105,13 +100,10 @@ public class ProjectService implements IProjectService {
                 members.add(projectMember.getEmployee());
             });
             members.forEach(employee -> {
-//                System.out.println(employee.getAccount().getAccountName()+": "+projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty());
-//                System.out.println(employee.getAccount().getAccountName()+": "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
-//                            .getState().equals(ProjectState.CLOSED))+", "+ employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
-//                        .isDelete()));
-//                if (projectMemberService.findProjectAndMemberByPMId(employee.getId()).isEmpty()
-                if (employee.getProjectMembers().stream().allMatch(projectMember -> projectMember.getProject().isDelete()==true)
-                        ||employee.getProjectMembers().isEmpty())
+                if (employee.getProjectMembers().stream().allMatch(projectMember -> projectMember.getProject().isDelete())
+                        || employee.getProjectMembers().isEmpty()
+                        || employee.getProjectMembers().stream().allMatch(arg0 -> arg0.getProject()
+                            .getState().equals(ProjectState.CLOSED) || arg0.getProject().isDelete()))
                     employee.setStatus(Status.SUPPORT);
             });
             return this.projectRepository.save(project);

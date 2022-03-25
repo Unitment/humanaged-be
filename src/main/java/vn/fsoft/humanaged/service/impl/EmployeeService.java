@@ -2,7 +2,6 @@ package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Status;
 import vn.fsoft.humanaged.repository.IDistrictRepository;
@@ -11,6 +10,7 @@ import vn.fsoft.humanaged.repository.IProvinceRepository;
 import vn.fsoft.humanaged.repository.IWardRepository;
 import vn.fsoft.humanaged.service.IEmployeeService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +21,7 @@ public class EmployeeService implements IEmployeeService {
     private IEmployeeRepository employeeRepository;
 
     @Autowired
-    IProvinceRepository provinceRepository ;
+    IProvinceRepository provinceRepository;
 
     @Autowired
     IDistrictRepository districtRepository;
@@ -41,6 +41,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Employee save(Employee entity) {
+        entity.setModifiedDate(LocalDateTime.now());
         return employeeRepository.save(entity);
     }
 

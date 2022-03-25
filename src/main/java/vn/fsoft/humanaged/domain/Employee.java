@@ -10,8 +10,6 @@ import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Null;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -50,16 +48,16 @@ public class Employee {
     @Nationalized
     private String country;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="province_id")
+    @ManyToOne
+    @JoinColumn
     private Province province;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="district_id")
+    @ManyToOne
+    @JoinColumn
     private District district;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="ward_id")
+    @ManyToOne
+    @JoinColumn
     private Ward ward;
 
     @Nationalized
@@ -70,7 +68,7 @@ public class Employee {
 
     @Column(nullable = false, columnDefinition = "bit default 0")
     private boolean isDelete;
-    
+
     private LocalDateTime modifiedDate;
 
     @OneToOne(cascade = CascadeType.ALL)
