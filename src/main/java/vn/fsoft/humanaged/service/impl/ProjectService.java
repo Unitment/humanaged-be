@@ -107,6 +107,13 @@ public class ProjectService implements IProjectService {
                 .orElseThrow(() -> new RuntimeException("Project not found"));
 
         List<EmployeeInProjectDTO> employees = entity.getEmployeeInProjectList();
+        employees.stream().allMatch(employee -> {
+            if (employeeRepository.findByAccountName(employee.getAccountName()).isPresent()) {
+                return true;
+            }
+            throw new RuntimeException(
+                    "Employee " + "[ " + employee.getAccountName() + " ]" + " not found");
+        });
         Set<ProjectMember> projectMembers = new HashSet<>();
         employees.forEach(employee -> {
             Employee member = employeeRepository.findByAccountName(employee.getAccountName())
@@ -127,8 +134,14 @@ public class ProjectService implements IProjectService {
                     projectMember.getEmployee().setStatus(Status.SUPPORT);
                     employeeRepository.save(projectMember.getEmployee());
                 } else if (projectMember.getEmployee().getProjectMembers().stream()
-                        .allMatch(arg0 -> !arg0.getProject().getId().equals(project.getId())
-                                && arg0.getProject().getState().equals(ProjectState.CLOSED))) {
+                .allMatch(arg0 -> {
+                    if (arg0.getProject().getId().equals(project.getId())) {
+                        return true;
+                    }else if (arg0.getProject().getState().equals(ProjectState.CLOSED)) {
+                        return true;
+                    }
+                    return false;
+                })) {
                     projectMember.getEmployee().setStatus(Status.SUPPORT);
                     employeeRepository.save(projectMember.getEmployee());
                 }
@@ -141,7 +154,7 @@ public class ProjectService implements IProjectService {
         project.setEndDate(entity.getEndDate());
         project.setState(entity.getState());
 
-        if (project.getState() == ProjectState.CLOSED) {
+        if (entity.getState() == ProjectState.CLOSED) {
             projectMembers.stream().forEach(projectMember -> {
                 if (projectMember.getEmployee().getProjectMembers().stream()
                         .allMatch(arg0 -> arg0.getProject().getState().equals(ProjectState.CLOSED))) {
