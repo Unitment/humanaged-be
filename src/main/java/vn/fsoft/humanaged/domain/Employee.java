@@ -50,17 +50,14 @@ public class Employee {
     @Nationalized
     private String country;
 
-    @Null
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="province_id")
     private Province province;
 
-    @Null
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="district_id")
     private District district;
 
-    @Null
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="ward_id")
     private Ward ward;
