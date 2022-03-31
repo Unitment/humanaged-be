@@ -1,12 +1,17 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Account;
+import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.repository.IAccountRepository;
+import vn.fsoft.humanaged.repository.IEmployeeRepository;
 import vn.fsoft.humanaged.service.IAccountService;
 import vn.fsoft.humanaged.util.Normalization;
 
+import javax.security.auth.login.AccountNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +20,12 @@ public class AccountService implements IAccountService {
 
     @Autowired
     private IAccountRepository accountRepository;
+
+    @Autowired
+    private IEmployeeRepository employeeRepository;
+
+    @Autowired
+    private PasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public List<Account> getAll() {
@@ -63,5 +74,31 @@ public class AccountService implements IAccountService {
     @Override
     public Optional<Account> getAccountByAccountName(String accountName) {
         return accountRepository.findById(accountName);
+    }
+
+    @Override
+    public Optional<Account> getAccountByResetPasswordToken(String ResetPasswordToken) {
+        return accountRepository.findByResetPasswordToken(ResetPasswordToken);
+    }
+
+    @Override
+    public void updatePassword(Account account, String newPassword){
+        account.setPassword(bCryptPasswordEncoder.encode(newPassword));
+        account.setResetPasswordToken(null);
+        accountRepository.save(account);
+    }
+
+    @Override
+    public Optional<Account> updateResetPasswordToken(String token, String accountName) throws AccountNotFoundException {
+        Optional<Employee> employee = employeeRepository.findByAccountName(accountName);
+        Optional<Account> oAccount = getAccountByAccountName(accountName);
+        if(oAccount.isPresent()){
+            oAccount.get().setResetPasswordToken(token);
+            accountRepository.save(oAccount.get());
+        }else{
+            throw new AccountNotFoundException("Could not find any Account with AccountName"+accountName);
+        }
+        employee.get().getMail();
+        return accountRepository.findByResetPasswordToken(token);
     }
 }

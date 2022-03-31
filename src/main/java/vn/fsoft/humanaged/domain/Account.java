@@ -20,6 +20,8 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private SystemRole role;
 
+    private String resetPasswordToken;
+
     // @JsonIgnore
     @OneToOne(mappedBy = "account")
     @JsonIgnore
