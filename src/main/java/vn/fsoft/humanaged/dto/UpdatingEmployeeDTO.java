@@ -27,8 +27,6 @@ public class UpdatingEmployeeDTO {
 
     private String avatar;
 
-    private String country;
-
     private Province province;
 
     private District district;
@@ -44,7 +42,6 @@ public class UpdatingEmployeeDTO {
         employee.setGender(this.gender);
         employee.setPhoneNumber(this.phoneNumber);
         employee.setAvatar(this.avatar);
-        employee.setCountry(this.country);
         employee.setProvince(this.province);
         employee.setDistrict(this.district);
         employee.setWard(this.ward);
