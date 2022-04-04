@@ -110,9 +110,10 @@ public class EmployeeController {
     }
 
     @PutMapping
-    public ResponseEntity<EmployeeDTO> update(@RequestBody EmployeeDTO employeeDTO) {
+    public ResponseEntity<EmployeeDTO> update(@RequestBody UpdatingEmployeeDTO updatingEmployeeDTO) {
+        Employee employee = employeeService.getById(updatingEmployeeDTO.getId()).get();
 
-        Employee employee = convertToEntity(employeeDTO);
+        updatingEmployeeDTO.updateEmployee(employee);
 
         return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee), EmployeeDTO.class));
     }
