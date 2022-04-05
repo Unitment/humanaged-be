@@ -109,13 +109,24 @@ public class EmployeeController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/{id}/update")
+    public ResponseEntity<UpdateEmployeeDTO> getUpdateEmployee(@PathVariable("id") String id) {
+        Optional<Employee> employeeOptional = employeeService.getById(id);
+
+        return employeeOptional
+                .map(employee -> ResponseEntity.ok(modelMapper.map(employee, UpdateEmployeeDTO.class)))
+                .orElse(ResponseEntity.notFound().build());
+    }
+
     @PutMapping
-    public ResponseEntity<EmployeeDTO> update(@RequestBody UpdatingEmployeeDTO updatingEmployeeDTO) {
-        Employee employee = employeeService.getById(updatingEmployeeDTO.getId()).get();
+    public ResponseEntity<EmployeeDTO> update(@RequestBody UpdateEmployeeDTO updatingEmployeeDTO) {
+        Optional<Employee> employeeOptional = employeeService.getById(updatingEmployeeDTO.getId());
 
-        updatingEmployeeDTO.updateEmployee(employee);
-
-        return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(employeeService.save(employee), EmployeeDTO.class));
+        return employeeOptional
+            .map(employee -> ResponseEntity
+                .status(HttpStatus.OK)
+                .body(modelMapper.map(employeeService.save(employee.update(updatingEmployeeDTO)), EmployeeDTO.class)))
+            .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/status/{status}")
@@ -148,7 +159,7 @@ public class EmployeeController {
         return employeeDTO;
     }
 
-    @GetMapping("/detail/{id}")
+    @GetMapping("/{id}/detail")
     @ResponseBody
     public ResponseEntity<EmployeeDetailDTO> getEmployeeDetailByID(@PathVariable("id") String id) {
         Optional<Employee> oEmployee = employeeService.getById(id);

@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import vn.fsoft.humanaged.dto.UpdateEmployeeDTO;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
@@ -82,4 +84,19 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     @JsonIgnore
     private Set<ProjectMember> projectMembers;
+
+    public Employee update(UpdateEmployeeDTO uEmployee){
+        if(!uEmployee.getId().equals(this.getId())) throw new IllegalArgumentException("id mismatch");
+        
+        this.setBirthday(uEmployee.getBirthday());
+        this.setGender(uEmployee.getGender());
+        this.setPhoneNumber(uEmployee.getPhoneNumber());
+        this.setAvatar(uEmployee.getAvatar());
+        this.setProvince(uEmployee.getProvince());
+        this.setDistrict(uEmployee.getDistrict());
+        this.setWard(uEmployee.getWard());
+        this.setAddress(uEmployee.getAddress());
+
+        return this;
+    }
 }

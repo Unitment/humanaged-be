@@ -16,14 +16,18 @@ import vn.fsoft.humanaged.domain.Ward;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdatingEmployeeDTO {
+public class UpdateEmployeeDTO {
     private String id;
+
+    private String name;
 
     private LocalDate birthday;
 
     private Gender gender;
 
     private String phoneNumber;
+
+    private String mail;
 
     private String avatar;
 
@@ -34,17 +38,4 @@ public class UpdatingEmployeeDTO {
     private Ward ward;
 
     private String address;
-
-    public void updateEmployee(Employee employee){
-        if(!employee.getId().equals(this.getId())) throw new IllegalArgumentException("id mismatch");
-        
-        employee.setBirthday(this.birthday);
-        employee.setGender(this.gender);
-        employee.setPhoneNumber(this.phoneNumber);
-        employee.setAvatar(this.avatar);
-        employee.setProvince(this.province);
-        employee.setDistrict(this.district);
-        employee.setWard(this.ward);
-        employee.setAddress(this.address);
-    }
 }
