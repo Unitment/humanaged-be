@@ -35,6 +35,8 @@ public class EmployeeController {
     @Autowired
     private ModelMapper modelMapper;
 
+    private final String FSOFT_DOMAIN = "@fsoft.com.vn";
+
     @PostMapping
     public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO) {
 
@@ -47,6 +49,8 @@ public class EmployeeController {
                 bCryptPasswordEncoder.encode(accountService.generateAccountForName(employee.getName())),
                 SystemRole.ROLE_USER
         ));
+
+        employee.setCompanyMail(employee.getAccount().getAccountName() + FSOFT_DOMAIN);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(employeeService.save(employee), EmployeeDTO.class));
     }
@@ -123,10 +127,10 @@ public class EmployeeController {
         Optional<Employee> employeeOptional = employeeService.getById(updatingEmployeeDTO.getId());
 
         return employeeOptional
-            .map(employee -> ResponseEntity
-                .status(HttpStatus.OK)
-                .body(modelMapper.map(employeeService.save(employee.update(updatingEmployeeDTO)), EmployeeDTO.class)))
-            .orElse(ResponseEntity.notFound().build());
+                .map(employee -> ResponseEntity
+                        .status(HttpStatus.OK)
+                        .body(modelMapper.map(employeeService.save(employee.update(updatingEmployeeDTO)), EmployeeDTO.class)))
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/status/{status}")

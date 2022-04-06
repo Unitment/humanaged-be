@@ -5,7 +5,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import vn.fsoft.humanaged.domain.Account;
 import vn.fsoft.humanaged.domain.Employee;
@@ -55,26 +54,25 @@ public class AccountController {
     }
 
     @PutMapping("/reset/{username}")
-    public ResponseEntity<?> processResetPassword(@PathVariable("username") String username){
+    public ResponseEntity<?> processResetPassword(@PathVariable("username") String username) {
         Optional<Employee> oEmployee = employeeService.findByAccountName(username);
         String token = RandomString.make(45);
-        try{
-            accountService.updateResetPasswordToken(token,username);
-            String resetPasswordLink = "http://localhost:4200/reset-password/"+token;
-            ;
-            emailSenderService.sendEmail(oEmployee.get().getMail(),resetPasswordLink);
-        }catch (AccountNotFoundException e) {
+        try {
+            accountService.updateResetPasswordToken(token, username);
+            String resetPasswordLink = "http://localhost:4200/reset-password/" + token;
+            emailSenderService.sendEmail(oEmployee.get().getPersonalMail(), resetPasswordLink);
+        } catch (AccountNotFoundException e) {
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
                     .body(e.getMessage());
-        } catch (MessagingException| UnsupportedEncodingException e2) {
+        } catch (MessagingException | UnsupportedEncodingException e2) {
             e2.printStackTrace();
         }
         return ResponseEntity.ok(token);
     }
 
     @GetMapping("/token/{token}")
-    public ResponseEntity<AccountDTO> getAccountByToken(@PathVariable("token") String token){
+    public ResponseEntity<AccountDTO> getAccountByToken(@PathVariable("token") String token) {
         Optional<Account> oAccount = accountService.getAccountByResetPasswordToken(token);
         return oAccount
                 .map(account -> ResponseEntity.ok(modelMapper.map(account, AccountDTO.class)))
@@ -82,10 +80,8 @@ public class AccountController {
     }
 
     @PutMapping("/change-password")
-    public ResponseEntity<Account> processResetPassword(@RequestBody Account account){
-        System.out.println("Vo duoc");
-        System.out.println(account.getPassword());
-        accountService.updatePassword(account,account.getPassword());
+    public ResponseEntity<Account> processResetPassword(@RequestBody Account account) {
+        accountService.updatePassword(account, account.getPassword());
         return ResponseEntity.ok(account);
     }
 }

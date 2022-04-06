@@ -4,12 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.fsoft.humanaged.domain.District;
-import vn.fsoft.humanaged.domain.Gender;
-import vn.fsoft.humanaged.domain.Province;
-import vn.fsoft.humanaged.domain.Status;
-import vn.fsoft.humanaged.domain.SystemRole;
-import vn.fsoft.humanaged.domain.Ward;
+import vn.fsoft.humanaged.domain.*;
 
 @Getter
 @Setter
@@ -26,9 +21,12 @@ public class EmployeeFlatDTO {
 
     private String phoneNumber;
 
-    private String mail;
+    private String companyMail;
+
+    private String personalMail;
 
     private String avatar;
+
     private String country;
 
     private Province province;

@@ -5,11 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.fsoft.humanaged.dto.UpdateEmployeeDTO;
-
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Parameter;
+import vn.fsoft.humanaged.dto.UpdateEmployeeDTO;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -40,7 +39,9 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private String mail;
+    private String companyMail;
+
+    private String personalMail;
 
     @Column(length = 1000)
     private String avatar;
@@ -85,13 +86,15 @@ public class Employee {
     @JsonIgnore
     private Set<ProjectMember> projectMembers;
 
-    public Employee update(UpdateEmployeeDTO uEmployee){
-        if(!uEmployee.getId().equals(this.getId())) throw new IllegalArgumentException("id mismatch");
-        
+    public Employee update(UpdateEmployeeDTO uEmployee) {
+        if (!uEmployee.getId().equals(this.getId())) throw new IllegalArgumentException("id mismatch");
+
         this.setBirthday(uEmployee.getBirthday());
         this.setGender(uEmployee.getGender());
         this.setPhoneNumber(uEmployee.getPhoneNumber());
         this.setAvatar(uEmployee.getAvatar());
+        this.setCompanyMail(uEmployee.getCompanyMail());
+        this.setPersonalMail(uEmployee.getPersonalMail());
         this.setProvince(uEmployee.getProvince());
         this.setDistrict(uEmployee.getDistrict());
         this.setWard(uEmployee.getWard());

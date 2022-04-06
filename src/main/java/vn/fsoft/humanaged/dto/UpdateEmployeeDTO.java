@@ -1,16 +1,15 @@
 package vn.fsoft.humanaged.dto;
 
-import java.time.LocalDate;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vn.fsoft.humanaged.domain.District;
-import vn.fsoft.humanaged.domain.Employee;
 import vn.fsoft.humanaged.domain.Gender;
 import vn.fsoft.humanaged.domain.Province;
 import vn.fsoft.humanaged.domain.Ward;
+
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -27,7 +26,9 @@ public class UpdateEmployeeDTO {
 
     private String phoneNumber;
 
-    private String mail;
+    private String companyMail;
+
+    private String personalMail;
 
     private String avatar;
 

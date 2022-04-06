@@ -4,12 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.fsoft.humanaged.domain.Account;
-import vn.fsoft.humanaged.domain.District;
-import vn.fsoft.humanaged.domain.Gender;
-import vn.fsoft.humanaged.domain.Province;
-import vn.fsoft.humanaged.domain.Status;
-import vn.fsoft.humanaged.domain.Ward;
+import vn.fsoft.humanaged.domain.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +25,9 @@ public class EmployeeDTO {
 
     private String phoneNumber;
 
-    private String mail;
+    private String companyMail;
+
+    private String personalMail;
 
     private String avatar;
 
@@ -57,7 +54,8 @@ public class EmployeeDTO {
         this.birthday = LocalDate.parse(employeeFlatDTO.getBirthday(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         this.gender = employeeFlatDTO.getGender();
         this.phoneNumber = employeeFlatDTO.getPhoneNumber();
-        this.mail = employeeFlatDTO.getMail();
+        this.companyMail = employeeFlatDTO.getCompanyMail();
+        this.personalMail = employeeFlatDTO.getPersonalMail();
         this.avatar = employeeFlatDTO.getAvatar();
         this.country = employeeFlatDTO.getCountry();
         this.province = employeeFlatDTO.getProvince();

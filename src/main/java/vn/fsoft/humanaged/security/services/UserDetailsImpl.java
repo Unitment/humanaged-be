@@ -27,7 +27,7 @@ public class UserDetailsImpl implements UserDetails {
 
     private String avatar;
 
-    private String mail;
+    private String companyMail;
 
     private Gender gender;
 
@@ -46,7 +46,7 @@ public class UserDetailsImpl implements UserDetails {
                 employee.getId(),
                 employee.getName(),
                 employee.getAvatar(),
-                employee.getMail(),
+                employee.getCompanyMail(),
                 employee.getGender(),
                 employee.getAccount().getAccountName(),
                 employee.getAccount().getPassword(),

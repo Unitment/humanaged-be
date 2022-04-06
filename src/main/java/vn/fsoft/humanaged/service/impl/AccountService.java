@@ -1,7 +1,6 @@
 package vn.fsoft.humanaged.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import vn.fsoft.humanaged.domain.Account;
@@ -82,7 +81,7 @@ public class AccountService implements IAccountService {
     }
 
     @Override
-    public void updatePassword(Account account, String newPassword){
+    public void updatePassword(Account account, String newPassword) {
         account.setPassword(bCryptPasswordEncoder.encode(newPassword));
         account.setResetPasswordToken(null);
         accountRepository.save(account);
@@ -92,13 +91,12 @@ public class AccountService implements IAccountService {
     public Optional<Account> updateResetPasswordToken(String token, String accountName) throws AccountNotFoundException {
         Optional<Employee> employee = employeeRepository.findByAccountName(accountName);
         Optional<Account> oAccount = getAccountByAccountName(accountName);
-        if(oAccount.isPresent()){
+        if (oAccount.isPresent()) {
             oAccount.get().setResetPasswordToken(token);
             accountRepository.save(oAccount.get());
-        }else{
-            throw new AccountNotFoundException("Could not find any Account with AccountName"+accountName);
+        } else {
+            throw new AccountNotFoundException("Could not find any Account with AccountName" + accountName);
         }
-        employee.get().getMail();
         return accountRepository.findByResetPasswordToken(token);
     }
 }
