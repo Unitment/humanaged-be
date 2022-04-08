@@ -18,4 +18,6 @@ public interface IEmployeeService extends IService<Employee, String> {
     Optional<Employee> findByAccountName(String accountName);
 
     List<Employee> findEmployeeExceptDeleted();
+
+    Optional<Employee> updateAvatar(String id, String avatar);
 }

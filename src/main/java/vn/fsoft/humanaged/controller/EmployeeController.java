@@ -129,6 +129,17 @@ public class EmployeeController {
             .orElse(ResponseEntity.notFound().build());
     }
 
+    @PutMapping("/{id}/avatar")
+    public ResponseEntity<EmployeeDTO> updateAvatar(@PathVariable("id") String id, @RequestBody String avatar) {
+        Optional<Employee> employeeOptional = employeeService.updateAvatar(id, avatar);
+
+        return employeeOptional
+            .map(employee -> ResponseEntity
+                .status(HttpStatus.OK)
+                .body(modelMapper.map(employee, EmployeeDTO.class)))
+            .orElse(ResponseEntity.notFound().build());
+    }
+
     @GetMapping("/status/{status}")
     public ResponseEntity<List<EmployeeDTO>> getWorkingEmployeeByStatus(@PathVariable("status") Status status) {
         List<Employee> employees = employeeService.findEmployeeByStatus(status, true);
@@ -183,11 +194,9 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public ResponseEntity<EmployeeDTO> removeEmployee(@PathVariable("id") String id) {
         Employee deletedEmployee = this.employeeService.updateEmployeeIsDelete(id, true);
-        EmployeeDTO employeeDTO = null;
 
-        if (deletedEmployee != null) employeeDTO = modelMapper.map(deletedEmployee, EmployeeDTO.class);
-
-        return ResponseEntity.ok(employeeDTO);
+        if (deletedEmployee != null) return ResponseEntity.ok(modelMapper.map(deletedEmployee, EmployeeDTO.class));
+        else return ResponseEntity.notFound().build();
     }
 
     @GetMapping("/provinces")

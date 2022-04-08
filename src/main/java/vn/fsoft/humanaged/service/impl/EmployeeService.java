@@ -72,6 +72,16 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
+    public Optional<Employee> updateAvatar(String id, String avatar){
+        Optional<Employee> oEmp = this.employeeRepository.findById(id);
+        
+        return oEmp.map(employee -> {
+            employee.setAvatar(avatar);
+            return Optional.of(this.employeeRepository.save(employee));
+        }).orElse(Optional.empty());
+    }
+
+    @Override
     public Optional<Employee> findByAccountName(String accountName) {
         return this.employeeRepository.findByAccountName(accountName);
     }

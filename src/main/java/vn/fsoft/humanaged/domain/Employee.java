@@ -91,7 +91,6 @@ public class Employee {
         this.setBirthday(uEmployee.getBirthday());
         this.setGender(uEmployee.getGender());
         this.setPhoneNumber(uEmployee.getPhoneNumber());
-        this.setAvatar(uEmployee.getAvatar());
         this.setProvince(uEmployee.getProvince());
         this.setDistrict(uEmployee.getDistrict());
         this.setWard(uEmployee.getWard());
