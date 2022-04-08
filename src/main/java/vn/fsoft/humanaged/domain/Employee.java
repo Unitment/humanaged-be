@@ -86,6 +86,26 @@ public class Employee {
     @JsonIgnore
     private Set<ProjectMember> projectMembers;
 
+    public Employee(String id, String name, LocalDate birthday, Gender gender, String companyMail, String personalMail, String avatar, String phoneNumber, String country, Province province, District district, Ward ward, String address, Status status, boolean isDelete, LocalDateTime modifiedDate, Account account) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.companyMail = companyMail;
+        this.personalMail = personalMail;
+        this.avatar = avatar;
+        this.phoneNumber = phoneNumber;
+        this.country = country;
+        this.province = province;
+        this.district = district;
+        this.ward = ward;
+        this.address = address;
+        this.status = status;
+        this.isDelete = isDelete;
+        this.modifiedDate = modifiedDate;
+        this.account = account;
+    }
+
     public Employee update(UpdateEmployeeDTO uEmployee) {
         if (!uEmployee.getId().equals(this.getId())) throw new IllegalArgumentException("id mismatch");
 

@@ -11,6 +11,7 @@ import vn.fsoft.humanaged.repository.IWardRepository;
 import vn.fsoft.humanaged.service.ILocationService;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LocationService implements ILocationService {
@@ -37,5 +38,27 @@ public class LocationService implements ILocationService {
     @Override
     public List<Ward> getAllWardByDistrictId(int id) {
         return wardRepository.getAllByDistrictId(id);
+    }
+
+    @Override
+    public Optional<Province> getProvinceById(int id) {
+        return provinceRepository.findById(id);
+    }
+
+    @Override
+    public Optional<District> getDistrictById(int id) {
+        return districtRepository.findById(id);
+    }
+
+    @Override
+    public Optional<Ward> getWardById(int id) {
+        return wardRepository.findById(id);
+    }
+
+    @Override
+    public void addLocationData(List<Province> provinces, List<District> districts, List<Ward> wards) {
+        provinceRepository.saveAll(provinces);
+        districtRepository.saveAll(districts);
+        wardRepository.saveAll(wards);
     }
 }

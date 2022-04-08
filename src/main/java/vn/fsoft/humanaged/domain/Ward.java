@@ -28,12 +28,10 @@ public class Ward {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "district_id", insertable = true)
-    @JsonIgnore
     private District district;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "province_id", insertable = true)
-    @JsonIgnore
     private Province province;
 
     @OneToMany(mappedBy = "ward")
